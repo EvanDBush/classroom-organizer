@@ -18,9 +18,9 @@ const apricots = new Classroom("Apricots", "Arry");
 const lemons = new Classroom("Lemons", "Laoghaire");
 
 class Student {
-    constructor (lastName, firstName, middleInitial, birthDate, emergencyContact) {
-        this.lastName = lastName;
+    constructor (firstName, lastName, middleInitial, birthDate, emergencyContact) {
         this.firstName = firstName;
+        this.lastName = lastName;
         this.middleInitial = middleInitial;
         this.birthDate = birthDate;
         this.emergencyContact = emergencyContact;      
