@@ -4,32 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/students.js"></script>
     <script defer src="js/scripts.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Classroom Organizer</title>
 </head>
 <body>
     <div>
-        <form action="index.html" method="post">
-            <h2>Classroom Information</h2>
-            <fieldset>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="classroom_name">
-                <label for="photo">Photo:</label>
-                <input type="image" id="photo" name="class_photo">
-                <label for="classsize">Number of Students:</label>
-                <input type="number" id="classsize" name="class_size">
-                <label for="classteachers">Teachers:</label>
-                <input type="text" id="classteachers" name="class_teachers">
-                <label for="classratio">Maximum Ratio:</label>
-                <input type="number" id="classratio" name="class_ratio">
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
+        <h3>Classroom List</h3>
+        <ul id="classroom-list"></ul>
     </div>
     <div>
+        <h3>Class Roster</h3>
+        <ul id="class-roster"></ul>
+    </div>
+    <div id="student-display">
+        <h3>Selected Child Display</h3>
+    </div>
+    <div>
+        <button id="hide-button">Input Form</button>
+    </div>
+    <div id="form-div" class="hide">
         <form action="index.html" method="post">
-            <h2>Child's Information</h2>
+            <h3>Child Information Form</h3>
             <fieldset>
                 <legend><span class="number">1</span>Basic Information:</legend>
                 <label for="name">Name:</label>
@@ -52,26 +49,6 @@
                 <textarea id="notes" name="child_notes"></textarea>
             </fieldset>
             <button type="submit"> Submit </button>
-        </form>
-    </div>
-    <div>
-        <form action="index.html" method="post">
-            <h2>Teachers's Information</h2>
-            <fieldset>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="teacher_name" placeholder="First, M, Last Name">            
-                <legend>Pay Tracking</legend>
-                <label for="wage">Pay (per Hour):</label>
-                <input type="number" id="wage" name="teacher_pay">
-                <legend>Teacher Role:</legend>
-                <label for="lead">Lead Teacher</label>
-                <input type="radio" id="lead" name="teacher_role">
-                <label for="assistant">Assistant Teacher</label>
-                <input type="radio" id="assistant" name="teacher_role">
-                <label for="experience">Experience:</label>        
-                <textarea id="experience" name="teacher_experience"></textarea>
-            </fieldset>
-            <button type="submit">Submit</button>
         </form>
     </div>
 </body>

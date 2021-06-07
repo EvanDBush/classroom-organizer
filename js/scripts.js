@@ -17,6 +17,7 @@ const pineapples = new Classroom("Pineapples", "Perry");
 const apricots = new Classroom("Apricots", "Arry");
 const lemons = new Classroom("Lemons", "Laoghaire");
 
+const classrooms = [peppers, grapes, apples, oranges, pears, pineapples, apricots, lemons]
 class Student {
     constructor (firstName, lastName, middleInitial, birthDate, emergencyContact) {
         this.firstName = firstName;
@@ -26,21 +27,6 @@ class Student {
         this.emergencyContact = emergencyContact;      
     };
 };
-
-const jack = new Student("James", "Bush", "A", "07/04/2020", "123-456-7890");
-const jimmy = new Student("Jimothy", "Young", "K", "01/05/2021", "555-555-5555");
-const jacques = new Student("Jacques", "Javert", "B", "07/14/2020", "502-574-1566");
-const joaquin = new Student("Joaquin", "Vogel", "F", "04/01/2020", "800-723-3288");
-const jaime = new Student("Jaime", "Carter", "P", "08/27/2020", "877-615-0914");
-const james = new Student("James", "Bond", "D", "03/13/2020", "007-247-7334");
-const iago = new Student("Iago", "Jenkins", "X", "06/10/2021", "007-247-7334");
-const yakov = new Student("Yakov", "Alexander", "I", "09/21/2020", "007-247-7334");
-const jacob = new Student("Jacob", "King", "K", "11/11/2021", "007-247-7334");
-const jimbo = new Student("Jimboniface", "Rogers", "Z", "04/01/2020", "007-247-7334");
-const giacomo = new Student("Giacomo", "Bond", "S", "03/09/2020", "007-247-7334");
-const hamish = new Student("Hamish", "", "F", "06/21/2021", "007-247-7334");
-const seamus = new Student("Seamus", "Jones", "D", "10/03/2020", "007-247-7334");
-const jimi = new Student("Jameson", "Hendrix", "Q", "01/23/2020", "007-247-7334");
 
 class Teacher {
     constructor(lastName, firstName, position, wage) {
@@ -96,5 +82,21 @@ function makeRandomName() {
         randomLastName[makeRandomInteger(0,randomLastName.length)];
 };
 
+const hideButton = document.getElementById('hide-button')
+const formDiv = document.getElementById('form-div')
+hideButton.addEventListener('click',()=>{
+    if (formDiv.style.display == 'none') {
+        formDiv.style.display = 'block'
+    } else {
+        formDiv.style.display = 'none'
+    }
+})
 
-
+const classroomList = document.getElementById('classroom-list')
+classrooms.forEach(classroom => {
+    let listItem = document.createElement('li')
+    listItem.textContent = 
+        `Classroom: ${classroom.classroomName} /\n/
+        Teacher: ${classroom.leadTeacher}`
+    classroomList.appendChild(listItem)
+})
