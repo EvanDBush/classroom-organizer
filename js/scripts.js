@@ -96,7 +96,7 @@ const classroomList = document.getElementById('classroom-list')
 classrooms.forEach(classroom => {
     let listItem = document.createElement('li')
     listItem.textContent = 
-        `Classroom: ${classroom.classroomName} /\n/
+        `Classroom: ${classroom.classroomName} //
         Teacher: ${classroom.leadTeacher}`
     classroomList.appendChild(listItem)
 })

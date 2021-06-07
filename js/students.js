@@ -105,3 +105,10 @@ let Students = [
         emergencyContact: "007-247-7334"
     }
 ];
+
+const studentList= document.getElementById('class-roster')
+Students.forEach(student => {
+    let listItem = document.createElement('li')
+    listItem.textContent = `${student.firstName} ${student.lastName}` 
+    studentList.appendChild(listItem)
+})
