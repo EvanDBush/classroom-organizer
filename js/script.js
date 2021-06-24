@@ -37,7 +37,11 @@ classList.addEventListener('click', (event)=> {
 function getStudentInfo(students, nameArray) {
     students.forEach(student => {
         if (student.firstName === nameArray[0] && student.lastName === nameArray[1]) {
-        document.getElementById('student-information').textContent = student.firstName//what is the best way to display this object?
+        document.getElementById('student-information').innerHTML = 
+            `${student.firstName} ${student.lastName} <br> 
+            Parent Name: ${student.parentName} <br>
+            Emergency Contact: ${student.phoneContact} <br>
+            Allergies: ${student.allergies}` //what is the best way to display this object?
         }
     })
 }
