@@ -1,0 +1,167 @@
+[
+    {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "middleInitial": "Middle Initial",
+        "birthDate": "Birthdate",
+        "parentName": "Parent Name",
+        "phoneContact": "Phone Contact",
+        "emailContact": "Email Contact",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "James",
+        "lastName": "Bush",
+        "middleInitial": "A",
+        "birthDate": "07/04/2020",
+        "parentName": "Evan Bush",
+        "phoneContact": "123-456-7890",
+        "emailContact": "swimmyjimmy@aol.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Jimothy", 
+        "lastName": "Young", 
+        "middleInitial": "K", 
+        "birthDate": "01/05/2021", 
+        "parentName": "Daryll Young",
+        "phoneContact": "555-545-4555",
+        "emailContact": "oldmanyoung@hotmail.com",
+        "inSchool": "true",
+        "allergies": "peanut"
+    },
+    {
+        "firstName": "Jacques",
+        "lastName": "Javert",
+        "middleInitial": "B",
+        "birthDate": "07/14/2020",
+        "parentName": "Jean Valjean",
+        "phoneContact": "502-574-9430",
+        "emailContact": "vivalapants@yahoo.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Joaquin",
+        "lastName": "Vogel",
+        "middleInitial": "F",
+        "birthDate": "04/01/2020",
+        "parentName": "Eagle Vogel",
+        "phoneContact": "800-723-3288",
+        "emailContact": "birdperson@outlook.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Jaime",
+        "lastName": "Carter",
+        "middleInitial": "P",
+        "birthDate": "08/27/2020",
+        "parentName": "Margaret Carter",
+        "phoneContact": "877-615-0914",
+        "emailContact": "yogathebear@fizzle.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "James",
+        "lastName": "Bond",
+        "middleInitial": "D",
+        "birthDate": "03/13/2020",
+        "parentName": "Melissa Coin",
+        "phoneContact": "007-247-7334",
+        "emailContact": "britainsbulldog@gmail.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Iago",
+        "lastName": "Jenkins",
+        "middleInitial": "X",
+        "birthDate": "06/10/2021",
+        "parentName": "Patricia Jenkins",
+        "phoneContact": "859-212-1338",
+        "emailContact": "letsdothis@yeet.com",
+        "inSchool": "true",
+        "allergies": "strawberries"
+    },
+    {
+        "firstName": "Yakov",
+        "lastName": "Alexander",
+        "middleInitial": "I",
+        "birthDate": "09/21/2020",
+        "parentName": "Elvira Alexander",
+        "phoneContact": "513-347-1111",
+        "emailContact": "Zandathepanda@aol.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Jacob",
+        "lastName": "King",
+        "middleInitial": "K",
+        "birthDate": "11/11/2021",
+        "parentName": "Lawrence King",
+        "phoneContact": "502-123-7334",
+        "emailContact": "elbowfish@yahoo.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Jimboniface",
+        "lastName": "Rogers",
+        "middleInitial": "Z",
+        "birthDate": "04/01/2020",
+        "parentName": "Margaret Carter",
+        "phoneContact": "512-207-3348",
+        "emailContact": "meemail.gmail.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Giacomo",
+        "lastName": "Bond",
+        "middleInitial": "S",
+        "birthDate": "03/09/2020",
+        "parentName": "Melissa Coin",
+        "phoneContact": "817-647-1234",
+        "emailContact": "britainsbulldog@gmail.com",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Hamish",
+        "lastName": "Storm-Crow",
+        "middleInitial": "F",
+        "birthDate": "06/21/2021",
+        "parentName": "Starchild Storm-Crow",
+        "phoneContact": "867-207-7234",
+        "emailContact": "wiccanwarrior.outlook.com",
+        "inSchool": "true",
+        "allergies": "shellfish"
+    },
+    {
+        "firstName": "Seamus",
+        "lastName": "Jones",
+        "middleInitial": "D",
+        "birthDate": "10/03/2020",
+        "parentName": "Michelle Jones",
+        "phoneContact": "007-247-7334",
+        "emailContact": "parrothead88",
+        "inSchool": "true",
+        "allergies": "none"
+    },
+    {
+        "firstName": "Jameson",
+        "lastName": "Hendrix",
+        "middleInitial": "Q",
+        "birthDate": "01/23/2020",
+        "parentName": "Janis Hendrix",
+        "phoneContact": "007-247-7334",
+        "emailContact": "Areyou@experienced.com",
+        "inSchool": "true",
+        "allergies": "none"
+    }
+]

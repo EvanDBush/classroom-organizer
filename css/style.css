@@ -1,0 +1,10 @@
+body {
+    font-family: 'Baloo Tammudu 2', cursive;
+    width: 50%;
+    margin: 40px auto;
+    text-align: center;   
+}
+
+.hide {
+    display: none;
+}

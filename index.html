@@ -4,35 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="js/students.js"></script>
-    <script defer src="js/scripts.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Classroom Organizer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    
+    <title>Classroom App</title>
 </head>
 <body>
+    <header>
+        <img src="img/badtz-maru.jpg" width="80px">
+        <h1><b>iinchou</b></h1>
+        <p>classroom application</p>
+        <ul class="main-nav">
+            <li><a href="#">Classrooms</a></li>
+			<li><a href="#">Students</a></li>
+			<li><a href="#">Teachers</a></li>
+			<li><a href="#">Important Dates</a></li>
+        </ul>
+    </header>
     <div>
-        <h3>Classroom List</h3>
-        <ul id="classroom-list"></ul>
+        <h3>Classroom-List</h3>
+        <ul id="classroom-ulist"></ul>   
     </div>
-    <div>
-        <h3>Class Roster</h3>
-        <ul id="class-roster"></ul>
-    </div>
-    <div id="student-display">
-        <h3>Selected Child Display</h3>
-    </div>
-    <div>
-        <button id="hide-button">Input Form</button>
-    </div>
-    <div id="form-div" class="hide">
-        
-            <h3>Child Information Form</h3>
+    <main id="classroom-display">
+        <h4>Class Roster</h4>
+        <ul id="class-list">
+
+        </ul>
+    </main>
+    <aside id="student-display">
+        <div id="student-information"></div>
+        <button id="form-button">Input Form</button>
+        <div id="student-form" class="hide">
             <fieldset>
                 <legend><span class="number">1</span>Basic Information:</legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="child_name" placeholder="First, M, Last Name">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="child-first-name" placeholder="First Name">
+                <label for="middleName">Middle Name:</label>
+                <input type="text" id="middleName" name="child-middle-name" placeholder="Middle Name">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="child-last-name" placeholder="Last Name">
                 <label for="name">Parent Name:</label>
-                <input type="text" id="parentname" name="parent_name" placeholder="First, M, Last Name">
+                <input type="text" id="parentname" name="parent_name" placeholder="First, Last Name">
                 <label for="emergency"> Emergency Contact</label>
                 <input type="tel" id="emergency" name="emergency_contact">
                 <label for="photo">Photo:</label>
@@ -40,16 +54,22 @@
                 <legend><span class="number">2</span>Important Dates:</legend>
                 <label for="birthdate">Birth Date:</label>
                 <input type="date" id="birthdate" name="child_bdate">
-                <label for="startdate">Start Date:</label>
+                <!-- <label for="startdate">Start Date:</label>
                 <input type="date" id="startdate" name="child_start">
                 <label for="placehold">Placeholder Date:</label>
-                <input type="date" id="placehold" name="child_holddate">
+                <input type="date" id="placehold" name="child_holddate"> -->
                 <legend><span class="number">3</span>Additional Info:</legend>
                 <label for="notes">Notes:</label>
                 <textarea id="notes" name="child_notes"></textarea>
+                <label for="allergies">Allergies:</label>
+                <input type="radio" id="allergies" name=" allergy_notes"></input>
             </fieldset>
-            <button type="submit"> Submit </button>
-        
-    </div>
+            <button type="submit"> Submit </button
+        </div>
+    </aside>
+    <footer>
+        <h3>Important Dates Bulletin.</h3>
+        <p id="test"></p>
+    </footer>
 </body>
 </html>
