@@ -1,8 +1,57 @@
+html {
+    background-color: gray;
+}
+
 body {
     font-family: 'Baloo Tammudu 2', cursive;
+    color: white;
     width: 50%;
-    margin: 40px auto;
-    text-align: center;   
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 15px;
+    background-color: black;   
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px
+
+}
+
+
+header li {
+    text-align:left;
+    display: flex;
+}
+
+header {
+    margin: 0px;
+}
+
+aside {
+    border: medium solid lightsalmon;
+    border-radius: 15px; 
+}
+
+main ul {
+    max-height: 200px;
+    overflow: scroll;
+    border: medium solid white;
+    border-radius: 15px; 
+    list-style-position: inside;
+}
+
+li {
+    margin: 5px;
+    border: medium solid black;
+    border-radius: 15px;
+    text-align:left; 
+}
+
+li:hover {
+    border: medium solid white;
+    background-color: gray;
+    border-radius: 15px; 
 }
 
 .hide {

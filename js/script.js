@@ -24,7 +24,7 @@ formButton.addEventListener('click', ()=>{
     } else {studentForm.style.display ='none'}
 })
 
-
+// gets students from JSON. NEED TO SET UP SERVER!
 const classList = document.getElementById('class-list')
 classList.addEventListener('click', (event)=> { 
     const selectedName = event.target;
@@ -34,6 +34,7 @@ classList.addEventListener('click', (event)=> {
     .then(students => getStudentInfo(students, nameArray))
 })
 
+// displays student information. Separate from above function
 function getStudentInfo(students, nameArray) {
     students.forEach(student => {
         if (student.firstName === nameArray[0] && student.lastName === nameArray[1]) {
@@ -41,7 +42,9 @@ function getStudentInfo(students, nameArray) {
             `${student.firstName} ${student.lastName} <br> 
             Parent Name: ${student.parentName} <br>
             Emergency Contact: ${student.phoneContact} <br>
-            Allergies: ${student.allergies}` //what is the best way to display this object?
+            Email Contact: ${student.emailContact} <br>
+            Date of Birth: ${student.birthDate} <br>
+            Allergies: ${student.allergies}` 
         }
     })
 }
