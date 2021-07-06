@@ -15,9 +15,11 @@ body {
 h1 {
     padding: 0px;
     margin: 0px
-
 }
 
+img {
+    border-radius: 15px;;
+}
 
 header li {
     text-align:left;
@@ -28,6 +30,30 @@ header {
     margin: 0px;
 }
 
+a:link {
+    color: lightsalmon;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: salmon;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: orangered;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 aside {
     border: medium solid lightsalmon;
     border-radius: 15px; 
@@ -35,7 +61,7 @@ aside {
 
 main ul {
     max-height: 200px;
-    overflow: scroll;
+    overflow-y: scroll;
     border: medium solid white;
     border-radius: 15px; 
     list-style-position: inside;
@@ -56,4 +82,14 @@ li:hover {
 
 .hide {
     display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;    
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #c2c9d2;
 }
