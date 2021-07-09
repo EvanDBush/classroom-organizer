@@ -1,22 +1,22 @@
-[{"event": "Rosh Hashanah",
+[{"holiday": "Rosh Hashanah",
 "date": ["09/06/2021", "09/07/2021", "09/08/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true" 
 },
 {
-"event": "Fast of Gedalia",
+"holiday": "Fast of Gedalia",
 "date": ["09/09/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event": "Yom Kippur",
+"holiday": "Yom Kippur",
 "date": ["09/15/2021", "09/16/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event": "Sukkot",
+"holiday": "Sukkot",
 "date": ["09/20/2021",
         "09/21/2021", 
         "09/22/2021", 
@@ -29,19 +29,19 @@
 "noWork": "true"
 },
 {
-"event": "Shemini Atzeret",
+"holiday": "Shemini Atzeret",
 "date": ["09/28/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event": "Simchat Torah",
+"holiday": "Simchat Torah",
 "date": ["09/29/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event": "Hannukah",
+"holiday": "Hannukah",
 "date": ["11/28/2021",
         "11/29/2021",
         "11/30/2021",
@@ -55,19 +55,19 @@
 "noWork": "true"
 },
 {
-"event": "Tu Bishavat",
+"holiday": "Tu Bishavat",
 "date": ["01/16/2022", "01/17/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event": "Purim",
+"holiday": "Purim",
 "date": ["03/16/2022", "03/17/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event": "Passover",
+"holiday": "Passover",
 "date": ["04/16/2022",
         "04/17/2022",
         "04/18/2022",
@@ -81,13 +81,13 @@
 "noWork": "true"
 },
 {
-"event": "Lag Ba'Omer",
+"holiday": "Lag Ba'Omer",
 "date":["05/18/2022", "05/19/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"event":"Shavuot",
+"holiday":"Shavuot",
 "date":["06/04/2022", "06/05/2022", "06/06/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"

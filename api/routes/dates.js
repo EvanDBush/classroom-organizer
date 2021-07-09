@@ -8,6 +8,12 @@ router.get('/',(request, response, nextFunction) => {
 });
 
 router.post('/',(request, response, nextFunction) => {
+    const date = {
+        holiday: request.holiday,
+        date: request.date,
+        description: request.description,
+        noWork: request.noWork,
+    }
     response.status(200).json({
         message: 'POST request to /dates'
     })
