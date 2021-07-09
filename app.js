@@ -15,9 +15,7 @@ mongoose.connect(
     'mongodb+srv://demo-user1:' + 
     process.env.MONGO_ATLAS_PW + 
     '@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
-    {
-        useMongoClient: true
-    }
+    { useUnifiedTopology: true, useNewUrlParser: true }
 )
 // Sets up middleware
 // runs routes through logger

@@ -23,7 +23,10 @@ router.post('/',(request, response, nextFunction) => {
         inSchool: request.inSchool,
         allergies: request.allergies
     });
-    student.save();
+    student.save().then(result => {
+        console.log(result);
+    })
+    .catch(err => console.log(err));
     response.status(200).json({
         message: 'POST request to /students',
         createdStudent: student 
