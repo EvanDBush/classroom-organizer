@@ -5,6 +5,7 @@ const studentSchema = mongoose.Schema({
     lastName: String,
     middleInitial: String,
     birthDate: Date,
+    parentName: String,
     phoneContact: String, //Should this be a number?
     emailContact: String,
     inSchool: Boolean,

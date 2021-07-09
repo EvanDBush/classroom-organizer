@@ -7,9 +7,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 // Sets up routes
 const studentRoutes = require('./api/routes/students');
-const classroomRoutes = require('./api/routes/classrooms');
+// const classroomRoutes = require('./api/routes/classrooms'); //unsure about how i want to construct
 const dateRoutes = require('./api/routes/dates');
-const messageRoutes = require('./api/routes/messages');
+// const messageRoutes = require('./api/routes/messages'); //unsure about how i want to construct
 //connects to database
 mongoose.connect(
     'mongodb+srv://demo-user1:' + 
@@ -32,24 +32,24 @@ app.use((request, response, nextFunction) => {
         response.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET')
         return response.status(200).json({});
     }
-    next();
+    nextFunction();
 });
 
 app.use('/students', studentRoutes);
-app.use('/classrooms', classroomRoutes);
+// app.use('/classrooms', classroomRoutes);  // HOLD for organizing
 app.use('/dates', dateRoutes);
-app.use('/messages', messageRoutes);
+// app.use('/messages', messageRoutes); // HOLD for organizing
 
 //handle errors that pass middleware
 app.use((request, response, nextFunction) => {
     const error = new Error('Not Found');
     error.status = 404;
     //forwards error request
-    next(error)
+    nextFunction(error)
 })
 // return 500 error
 app.use((error, request, response, nextFunction) => {
-    response.status(err.status || 500);
+    response.status(error.status || 500);
     response.json({
         error: {
             message: error.message

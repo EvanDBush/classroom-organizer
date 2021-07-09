@@ -42,28 +42,23 @@
                 <legend><span class="number">1</span>Basic Information:</legend>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="child-first-name" placeholder="First Name">
-                <label for="middleName">Middle Name:</label>
-                <input type="text" id="middleName" name="child-middle-name" placeholder="Middle Name">
                 <label for="lastName">Last Name:</label>
                 <input type="text" id="lastName" name="child-last-name" placeholder="Last Name">
+                <label for="middleInitial">Middle Name:</label>
+                <input type="text" id="middleInitial" name="child-middle-initial" placeholder="Middle Initial">
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" id="birthdate" name="child_bdate">
                 <label for="name">Parent Name:</label>
                 <input type="text" id="parentname" name="parent_name" placeholder="First, Last Name">
                 <label for="emergency"> Emergency Contact</label>
-                <input type="tel" id="emergency" name="emergency_contact">
-                <label for="photo">Photo:</label>
-                <input type="image" id="photo" name="child_photo">
-                <legend><span class="number">2</span>Important Dates:</legend>
-                <label for="birthdate">Birth Date:</label>
-                <input type="date" id="birthdate" name="child_bdate">
-                <!-- <label for="startdate">Start Date:</label>
-                <input type="date" id="startdate" name="child_start">
-                <label for="placehold">Placeholder Date:</label>
-                <input type="date" id="placehold" name="child_holddate"> -->
+                <input type="tel" id="phoneContact" name="emergency_contact">
+                <label for="email"> E-mail Contact</label>
+                <input type="email" id="emailContact" name="email_contact">
                 <legend><span class="number">3</span>Additional Info:</legend>
-                <label for="notes">Notes:</label>
-                <textarea id="notes" name="child_notes"></textarea>
+                <label for="inSchool">In School?</label>
+                <input type="radio" id="inSchool" name="student_status">
                 <label for="allergies">Allergies:</label>
-                <input type="radio" id="allergies" name=" allergy_notes"></input>
+                <input type="text" id="allergies" name=" allergy_notes"></input>
             </fieldset>
             <button type="submit"> Submit </button
         </div>
