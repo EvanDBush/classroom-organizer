@@ -1,0 +1,97 @@
+[{"event": "Rosh Hashanah",
+"date": ["09/06/2021", "09/07/2021", "09/08/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true" 
+},
+{
+"event": "Fast of Gedalia",
+"date": ["09/09/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Yom Kippur",
+"date": ["09/15/2021", "09/16/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Sukkot",
+"date": ["09/20/2021",
+        "09/21/2021", 
+        "09/22/2021", 
+        "09/23/2021", 
+        "09/24/2021",
+        "09/25/2021",
+        "09/26/2021",
+        "09/27/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Shemini Atzeret",
+"date": ["09/28/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Simchat Torah",
+"date": ["09/29/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Hannukah",
+"date": ["11/28/2021",
+        "11/29/2021",
+        "11/30/2021",
+        "12/01/2021",
+        "12/02/2021",
+        "12/03/2021",
+        "12/04/2021",
+        "12/05/2021",
+        "12/06/2021"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Tu Bishavat",
+"date": ["01/16/2022", "01/17/2022"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Purim",
+"date": ["03/16/2022", "03/17/2022"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Passover",
+"date": ["04/16/2022",
+        "04/17/2022",
+        "04/18/2022",
+        "04/19/2022",
+        "04/20/2022",
+        "04/21/2022",
+        "04/22/2022",
+        "04/23/2022"
+        ],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event": "Lag Ba'Omer",
+"date":["05/18/2022", "05/19/2022"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+},
+{
+"event":"Shavuot",
+"date":["06/04/2022", "06/05/2022", "06/06/2022"],
+"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
+"noWork": "true"
+}
+]
+
+
