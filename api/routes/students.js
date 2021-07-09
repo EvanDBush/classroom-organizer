@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+
+const Student = require('../models/students')
 
 router.get('/',(request, response, nextFunction) => {
     response.status(200).json({
@@ -8,7 +11,8 @@ router.get('/',(request, response, nextFunction) => {
 });
 
 router.post('/',(request, response, nextFunction) => {
-    const student = {
+    const student = new Student({
+        _id: new mongoose.Types.ObjectId(),
         firstName: request.firstName,
         lastName: request.lastName,
         middleInitial: request.middleInitial,
@@ -18,7 +22,8 @@ router.post('/',(request, response, nextFunction) => {
         emailContact: request.emailContact,
         inSchool: request.inSchool,
         allergies: request.allergies
-    }
+    });
+    student.save();
     response.status(200).json({
         message: 'POST request to /students',
         createdStudent: student 
