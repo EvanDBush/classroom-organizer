@@ -12,7 +12,7 @@ router.post('/',(request, response, nextFunction) => {
     })
 });
 
-router.delete('/',(request, response, nextFunction) => {
+router.delete('/:messageId',(request, response, nextFunction) => {
     response.status(200).json({
         message: 'Deleted Message!'
     })
