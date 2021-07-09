@@ -8,8 +8,20 @@ router.get('/',(request, response, nextFunction) => {
 });
 
 router.post('/',(request, response, nextFunction) => {
+    const student = {
+        firstName: request.firstName,
+        lastName: request.lastName,
+        middleInitial: request.middleInitial,
+        birthDate: request.birthDate,
+        parentName: request.parentName,
+        phoneContact: request.phoneContact,
+        emailContact: request.emailContact,
+        inSchool: request.inSchool,
+        allergies: request.allergies
+    }
     response.status(200).json({
-        message: 'POST request to /students'
+        message: 'POST request to /students',
+        createdStudent: student 
     })
 });
 
