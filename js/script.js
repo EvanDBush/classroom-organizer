@@ -24,7 +24,7 @@ formButton.addEventListener('click', ()=>{
     } else {studentForm.style.display ='none'}
 })
 
-// gets students from JSON. NEED TO SET UP SERVER!
+// gets students from JSON. 
 const classList = document.getElementById('class-list')
 classList.addEventListener('click', (event)=> { 
     const selectedName = event.target;
