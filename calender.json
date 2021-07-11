@@ -1,22 +1,22 @@
-[{"holiday": "Rosh Hashanah",
+[{"name": "Rosh Hashanah",
 "date": ["09/06/2021", "09/07/2021", "09/08/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true" 
 },
 {
-"holiday": "Fast of Gedalia",
+"name": "Fast of Gedalia",
 "date": ["09/09/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday": "Yom Kippur",
+"name": "Yom Kippur",
 "date": ["09/15/2021", "09/16/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday": "Sukkot",
+"name": "Sukkot",
 "date": ["09/20/2021",
         "09/21/2021", 
         "09/22/2021", 
@@ -29,19 +29,19 @@
 "noWork": "true"
 },
 {
-"holiday": "Shemini Atzeret",
+"name": "Shemini Atzeret",
 "date": ["09/28/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday": "Simchat Torah",
+"name": "Simchat Torah",
 "date": ["09/29/2021"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday": "Hannukah",
+"name": "Hannukah",
 "date": ["11/28/2021",
         "11/29/2021",
         "11/30/2021",
@@ -55,19 +55,19 @@
 "noWork": "true"
 },
 {
-"holiday": "Tu Bishavat",
+"name": "Tu Bishavat",
 "date": ["01/16/2022", "01/17/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday": "Purim",
+"name": "Purim",
 "date": ["03/16/2022", "03/17/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday": "Passover",
+"name": "Passover",
 "date": ["04/16/2022",
         "04/17/2022",
         "04/18/2022",
@@ -81,13 +81,13 @@
 "noWork": "true"
 },
 {
-"holiday": "Lag Ba'Omer",
+"name": "Lag Ba'Omer",
 "date":["05/18/2022", "05/19/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
 },
 {
-"holiday":"Shavuot",
+"name":"Shavuot",
 "date":["06/04/2022", "06/05/2022", "06/06/2022"],
 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,",
 "noWork": "true"
