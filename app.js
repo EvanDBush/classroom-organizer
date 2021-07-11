@@ -7,9 +7,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 // Sets up routes
 const studentRoutes = require('./api/routes/students');
-// const classroomRoutes = require('./api/routes/classrooms'); //unsure about how i want to construct
+const classroomRoutes = require('./api/routes/classrooms');
 const dateRoutes = require('./api/routes/dates');
-// const messageRoutes = require('./api/routes/messages'); //unsure about how i want to construct
+const messageRoutes = require('./api/routes/messages');
 //connects to database
 mongoose.connect(
     'mongodb+srv://demo-user1:' + 
@@ -36,9 +36,9 @@ app.use((request, response, nextFunction) => {
 });
 
 app.use('/students', studentRoutes);
-// app.use('/classrooms', classroomRoutes);  // HOLD for organizing
+app.use('/classrooms', classroomRoutes);
 app.use('/dates', dateRoutes);
-// app.use('/messages', messageRoutes); // HOLD for organizing
+app.use('/messages', messageRoutes);
 
 //handle errors that pass middleware
 app.use((request, response, nextFunction) => {
