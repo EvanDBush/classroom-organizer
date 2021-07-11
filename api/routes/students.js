@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-
 const Student = require('../models/students')
 
 router.get('/',(request, response, nextFunction) => {
@@ -23,10 +22,15 @@ router.post('/',(request, response, nextFunction) => {
         inSchool: request.inSchool,
         allergies: request.allergies
     });
-    student.save().then(result => {
+    student
+        .save()
+        .then(result => {
         console.log(result);
+        response.status(201).json({
+            message: "handling POST requests to /students"
+        })
     })
-    .catch(err => console.log(err));
+    .catch(error => console.log(error));
     response.status(200).json({
         message: 'POST request to /students',
         createdStudent: student 
@@ -35,16 +39,16 @@ router.post('/',(request, response, nextFunction) => {
 
 router.get('/:studentId',(request, response, nextFunction) => {
     const id = request.params.studentId;
-    if (id === 'special') { //configure to ids
-        response.status(200).json({
-            message: 'You have found the special ID',
-            id: id
-        });
-    } else {
-        response.status(200).json({
-            message: 'You passed an ID'
-        })
-    }
+    Student.findById(id)
+    .exec()
+    .then(document => {
+        console.log('From database', document);
+        response.status(200).json(document);
+    })
+    .catch(error => {
+        console.log(error);
+        response.status(500).json({error: error});
+    })
 });
 
 router.patch('/:studentId',(request, response, nextFunction) => {
