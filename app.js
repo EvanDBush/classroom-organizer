@@ -10,13 +10,17 @@ const dateRoutes = require('./api/routes/dates');
 const messageRoutes = require('./api/routes/messages');
 
 //connects to database
-mongoose.connect(
-    'mongodb+srv://demo-user1:' + 
-    process.env.MONGO_ATLAS_PW + 
-    '@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
-    { useUnifiedTopology: true, useNewUrlParser: true })
+// mongoose.connect(
+//     'mongodb+srv://demo-user1:' + 
+//     process.env.MONGO_ATLAS_PW + 
+//     '@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
+//     { useUnifiedTopology: true, useNewUrlParser: true })
 
-    //  middleware
+mongoose.connect('mongodb+srv://demo-user1:URD2pRBrerc2avCt' +
+'@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
+{ useUnifiedTopology: true, useNewUrlParser: true })
+
+//  middleware
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false})); //simple bodies
 app.use(express.json());
