@@ -18,13 +18,10 @@ router.get('/',(req, res, nextFunction) => {
         })
     });
 
-router.patch('/:classroomId',(req, res, nextFunction) => {
-    const id = req.params.productId;
-    const updateOps = {};
-    for (const ops of req.body) {
-    updateOps[ops.propName] = ops.value;
-    }
-    Classroom.save({ _id: id }, { $set: updateOps })
+router.patch('/:id',(req, res, nextFunction) => {
+    const id = req.params.id;
+    Classroom.findByIdAndUpdate(id,
+        { $set: req.body }, { new: true})
         .exec()
         .then(result => {
         console.log(result);

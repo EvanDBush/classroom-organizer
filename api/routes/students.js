@@ -49,8 +49,8 @@ router.post('/',(req, res, nextFunction) => {
 });
 
 
-router.get('/:studentId',(req, res, nextFunction) => {
-    const id = req.params.studentId;
+router.get('/:id',(req, res, nextFunction) => {
+    const id = req.params.id;
     Student.findById(id)
     .exec()
     .then(doc => {
@@ -70,13 +70,10 @@ router.get('/:studentId',(req, res, nextFunction) => {
     })
 });
 
-router.patch('/:studentId',(req, res, nextFunction) => {
-    const id = req.params.productId;
-    const updateOps = {};
-    for (const ops of req.body) {
-    updateOps[ops.propName] = ops.value;
-    }
-    Student.save({ _id: id }, { $set: updateOps })
+router.patch('/:id',(req, res, nextFunction) => {
+    const id = req.params.id;
+    Student.findByIdAndUpdate(id,
+        { $set: req.body }, { new: true})
         .exec()
         .then(result => {
         console.log(result);
