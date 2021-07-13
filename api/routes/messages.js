@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Message = require('../models/messages');
 
-router.get('/',(request, response, nextFunction) => {
+router.get('/',(req, res, nextFunction) => {
     Message.find()
         .exec()
         .then(documents => {
@@ -12,39 +12,48 @@ router.get('/',(request, response, nextFunction) => {
         })
         .catch(err => {
             console.log(err);
-            response.status(500).json({
+            res.status(500).json({
                 error: err
             })
         })
 });
 
-router.post('/',(request, response, nextFunction) => {
+router.post('/',(req, res, nextFunction) => {
     const message = new Message({
         _id: new mongoose.Types.ObjectId(),
-        headline: request.headline,
-        content: request.content,
-        poatDateDate: request.postDate,
-        classrooms: request.classrooms
+        headline: req.headline,
+        content: req.content,
+        poatDateDate: req.postDate,
+        classrooms: req.classrooms
     });
     message
         .save()
         .then(result => {
             console.log(result);
-            response.status(201).json({
+            res.status(201).json({
                 message: "handling POST requsts to /messages"
             })
         })
     .catch(error => console.log(error));
-    response.status(200).json({
+    res.status(200).json({
         message: 'POST request to /messages',
         createdMessage: message
     })
 });
 
-router.delete('/:messageId',(request, response, nextFunction) => {
-    response.status(200).json({
-        message: 'Deleted Message!'
-    })
+router.delete('/:messageId',(req, res, nextFunction) => {
+    const id = req.params.productId;
+    Message.remove({ _id: id })
+        .exec()
+        .then(result => {
+        res.status(200).json(result);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+            error: err
+        });
+    });
 });
 
 module.exports = router;

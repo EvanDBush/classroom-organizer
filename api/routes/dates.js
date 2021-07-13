@@ -31,8 +31,9 @@ router.post('/',(request, response, nextFunction) => {
         .then(result =>{
             console.log(result);
             response.status(201).json({
-                message: "POST sucessful. resource dates created"
-            })
+                message: "POST sucessful. resource dates created",
+                createdDate: result
+            });
         })
     .catch(error => { 
         console.log(error);

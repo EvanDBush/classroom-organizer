@@ -17,15 +17,25 @@ router.get('/',(req, res, nextFunction) => {
             })
         })
     });
-// POST to classroom.students? should be patch??
-// router.patch('/:classroomId',(req, res, nextFunction) => {
-//     const id = req.params.classroomId;
-//     Classroom.findByIdAndUpdate(id)
-//     .exec()
-//     .then()// Look up patch
-//     res.status(200).json({
-//         message: 'handling POST req to /classrooms'
-//     })
-// });
+
+router.patch('/:classroomId',(req, res, nextFunction) => {
+    const id = req.params.productId;
+    const updateOps = {};
+    for (const ops of req.body) {
+    updateOps[ops.propName] = ops.value;
+    }
+    Classroom.save({ _id: id }, { $set: updateOps })
+        .exec()
+        .then(result => {
+        console.log(result);
+        res.status(200).json(result);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+            error: err
+            });
+        });
+});
 
 module.exports = router;
