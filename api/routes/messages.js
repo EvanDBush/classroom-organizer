@@ -4,9 +4,18 @@ const mongoose = require('mongoose');
 const Message = require('../models/messages');
 
 router.get('/',(request, response, nextFunction) => {
-    response.status(200).json({
-        message: 'GET request to /messages'
-    })
+    Message.find()
+        .exec()
+        .then(documents => {
+            console.log(documents);
+            respnse.status(200).json(documents);
+        })
+        .catch(err => {
+            console.log(err);
+            response.status(500).json({
+                error: err
+            })
+        })
 });
 
 router.post('/',(request, response, nextFunction) => {

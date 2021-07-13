@@ -4,10 +4,19 @@ const mongoose = require('mongoose');
 const Student = require('../models/students')
 
 router.get('/',(request, response, nextFunction) => {
-    response.status(200).json({
-        message: 'GET request to /students'
-    })
-});
+    Student.find()
+        .exec()
+        .then(documents => {
+            console.log(documents);
+            response.status(200).json(documents);
+        })
+        .catch(err => {
+            console.log(err);
+            response.status(500).json({
+                error: err
+            })
+        })
+    });
 
 router.post('/',(request, response, nextFunction) => {
     const student = new Student({
@@ -27,15 +36,18 @@ router.post('/',(request, response, nextFunction) => {
         .then(result => {
         console.log(result);
         response.status(201).json({
-            message: "handling POST requests to /students"
+            message: "handling POST requests to /students",
+            createdStudent: result
+        });
+    })
+    .catch(err => { 
+        console.log(err);
+        response.status(500).json({
+            error: err
         })
     })
-    .catch(error => console.log(error));
-    response.status(200).json({
-        message: 'POST request to /students',
-        createdStudent: student 
-    })
 });
+
 
 router.get('/:studentId',(request, response, nextFunction) => {
     const id = request.params.studentId;
@@ -43,7 +55,14 @@ router.get('/:studentId',(request, response, nextFunction) => {
     .exec()
     .then(document => {
         console.log('From database', document);
-        response.status(200).json(document);
+        if (document) {
+            response.status(200).json(document);
+        } else {
+            response.status(404).json({
+                message: "No entry found for ID provided"
+            })
+        }
+        
     })
     .catch(error => {
         console.log(error);
