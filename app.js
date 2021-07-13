@@ -1,26 +1,23 @@
 const express = require('express');
-// Spins up express
 const app = express();
-// Sets up logger
 const morgan = require('morgan');
-// Sets up Mongoose
 const mongoose = require('mongoose');
-// Sets up routes
+
+// routes
 const studentRoutes = require('./api/routes/students');
 const classroomRoutes = require('./api/routes/classrooms');
 const dateRoutes = require('./api/routes/dates');
 const messageRoutes = require('./api/routes/messages');
+
 //connects to database
 mongoose.connect(
     'mongodb+srv://demo-user1:' + 
     process.env.MONGO_ATLAS_PW + 
     '@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
-    { useUnifiedTopology: true, useNewUrlParser: true }
-)
-// Sets up middleware
-// runs routes through logger
+    { useUnifiedTopology: true, useNewUrlParser: true })
+
+    //  middleware
 app.use(morgan('dev'));
-//runs through body parser
 app.use(express.urlencoded({extended: false})); //simple bodies
 app.use(express.json());
 // Headers to prevent CORS errors
@@ -44,10 +41,9 @@ app.use('/messages', messageRoutes);
 app.use((request, response, nextFunction) => {
     const error = new Error('Not Found');
     error.status = 404;
-    //forwards error request
     nextFunction(error)
 })
-// return 500 error
+
 app.use((error, request, response, nextFunction) => {
     response.status(error.status || 500);
     response.json({
