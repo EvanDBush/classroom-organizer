@@ -1,0 +1,20 @@
+[
+    {
+        "name": "grapes",
+        "maxStudents": "10",
+        "agesDates": "[06/01/2021, 01/01/2021]",
+        "students": "[]"
+    },
+    {
+        "name": "lemons",
+        "maxStudents": "12",
+        "agesDates": "[12/31/2021, 08/01/2020]",
+        "students": "[]"
+    },
+    {
+        "name": "apples",
+        "maxStudents": "20",
+        "agesDates": "[07/31/2020, 08/01/2019]",
+        "students": "[]"
+    }
+]
