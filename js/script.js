@@ -1,6 +1,6 @@
 //---Gets student list from students.json
 document.addEventListener('DOMContentLoaded', function() {
-fetch('./js/students.json')
+fetch('./data/students.json')
 .then(result => result.json())
 .then(students => buildList(students))
 })
@@ -29,7 +29,7 @@ const classList = document.getElementById('class-list')
 classList.addEventListener('click', (event)=> { 
     const selectedName = event.target;
     const nameArray = selectedName.textContent.split(" ");
-    fetch('./js/students.json')
+    fetch('./data/students.json')
     .then(result => result.json())
     .then(students => getStudentInfo(students, nameArray))
 })

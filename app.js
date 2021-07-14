@@ -16,9 +16,8 @@ const messageRoutes = require('./api/routes/messages');
 //     '@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
 //     { useUnifiedTopology: true, useNewUrlParser: true })
 
-mongoose.connect('mongodb+srv://demo-user1:URD2pRBrerc2avCt' +
-'@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
-{ useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect('mongodb+srv://demo-user1:URD2pRBrerc2avCt@cluster0.tnvmw.mongodb.net/ClassRoomDB?retryWrites=true&w=majority',
+{ useUnifiedTopology: true, useNewUrlParser: true });
 
 //  middleware
 app.use(morgan('dev'));

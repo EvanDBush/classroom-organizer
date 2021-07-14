@@ -6,9 +6,9 @@ const Message = require('../models/messages');
 router.get('/',(req, res, nextFunction) => {
     Message.find()
         .exec()
-        .then(documents => {
-            console.log(documents);
-            respnse.status(200).json(documents);
+        .then(docs => {
+            console.log(docs);
+            res.status(200).json(docs);
         })
         .catch(err => {
             console.log(err);
@@ -16,7 +16,7 @@ router.get('/',(req, res, nextFunction) => {
                 error: err
             })
         })
-});
+    });
 
 router.post('/',(req, res, nextFunction) => {
     const message = new Message({
