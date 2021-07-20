@@ -27,6 +27,11 @@ classroomsArray.forEach(classroom => {
     classroomList.appendChild(listItem)
 })
 
+
+
+
 classroomList.addEventListener('click', (event) => {
     const selectedClassroom = event.target;
 })
+
+

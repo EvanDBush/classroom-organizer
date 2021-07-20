@@ -1,19 +1,21 @@
-'use strict';
-const fs = require('fs');
+// const fs = require('fs');
 
-fs.readFile('./data/calender.json', (err, data) => {
-    if (err) throw err;
-    let dateData = JSON.parse(data);
-    console.log(dateData);
-});
-console.log('calender read by fs module');
+// fs.readFile('./data/calender.json', (err, data) => {
+//     if (err) throw err;
+//     let dateData = JSON.parse(data);
+//     dateData.forEach(date => {
+//         const p = document.createElement("p");
+//         p.textContent = `${date.name}: ${date.date[0]} `
+//         document.getElementById("test").appendChild(p);
+        
+//     })
+// });
 
-// Displays current time
+
+// Displays current date
 const timeDisplay = document.getElementById('time-display');
 const today = new Date();
 const [month, day, year] = 
-    [date.getMonth(), date.getDate(), date.getFullYear()];
-const [hour, minutes, seconds] = 
-    [date.getHours(), date.getMinutes(), date.getSeconds()];
+    [today.getMonth(), today.getDate(), today.getFullYear()];
 
 timeDisplay.textContent = `Todays Date: ${[month, day, year]}`;

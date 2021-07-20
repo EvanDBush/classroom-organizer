@@ -49,7 +49,7 @@ function getStudentInfo(students, nameArray) {
     })
 }
 
-// submits student form to db
+// submits student form to db NOT FINISHED
 const form = document.getElementById('student-form');
 const log = document.getElementById('log')
 
