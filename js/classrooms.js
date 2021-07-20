@@ -4,7 +4,6 @@ class Classroom {
     this.ageRange = ageRange;
     this.students = students;
     }
-
     addStudent(student) {
         this.students.push(student);
     }
@@ -26,4 +25,8 @@ classroomsArray.forEach(classroom => {
     let listItem = document.createElement('li')
     listItem.textContent = `${classroom.roomName} ${classroom.students.length}`
     classroomList.appendChild(listItem)
+})
+
+classroomList.addEventListener('click', (event) => {
+    const selectedClassroom = event.target;
 })
