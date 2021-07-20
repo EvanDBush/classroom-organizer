@@ -9,15 +9,13 @@ const classroomRoutes = require('./api/routes/classrooms');
 const dateRoutes = require('./api/routes/dates');
 const messageRoutes = require('./api/routes/messages');
 
-//connects to database
-// mongoose.connect(
-//     'mongodb+srv://demo-user1:' + 
-//     process.env.MONGO_ATLAS_PW + 
-//     '@cluster0.tnvmw.mongodb.net/classroomDB?retryWrites=true&w=majority',
-//     { useUnifiedTopology: true, useNewUrlParser: true })
-
 mongoose.connect('mongodb+srv://demo-user1:' +process.env.MONGO_ATLAS_PW+ '@cluster0.tnvmw.mongodb.net/ClassRoomDB?retryWrites=true&w=majority',
-{ useUnifiedTopology: true, useNewUrlParser: true });
+{ useUnifiedTopology: true, useNewUrlParser: true }).
+catch(error => handleError(error));
+
+mongoose.connection.on('error', err => {
+    logError(err);
+});
 
 //  middleware
 app.use(morgan('dev'));
