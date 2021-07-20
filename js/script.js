@@ -48,3 +48,14 @@ function getStudentInfo(students, nameArray) {
         }
     })
 }
+
+// submits student form to db
+const form = document.getElementById('student-form');
+const log = document.getElementById('log')
+
+function logSubmit(event) {
+    log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+    event.preventDefault();
+};
+
+form.addEventListener('submit', logSubmit)
