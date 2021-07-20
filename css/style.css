@@ -5,7 +5,7 @@ html {
 body {
     font-family: 'Baloo Tammudu 2', cursive;
     color: white;
-    width: 50%;
+    width: 90%;
     margin: 10px auto;
     text-align: center;
     border-radius: 15px;
@@ -69,6 +69,7 @@ main ul {
 
 li {
     margin: 5px;
+    size: 20px;
     border: medium solid black;
     border-radius: 15px;
     text-align:left; 
@@ -92,4 +93,10 @@ li:hover {
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background: #c2c9d2;
+}
+
+@media (min-width: 900px) {
+    body {
+        width: 50%;
+    };
 }
