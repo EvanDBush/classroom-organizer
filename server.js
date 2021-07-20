@@ -10,3 +10,7 @@ const server = http.createServer(app);
 server.listen(port, () => {
     console.log(`the server is running on port: ${port}`)
 });
+
+// app.get("/", (req, res) => {
+//     res.render('index');
+// });
