@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
-    <script defer src="js/script.js"></script>
-    <script defer src="js/dates.js"></script>
-    <script defer src="js/classrooms.js"></script>
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/dates.js"></script>
+    <script defer src="/js/classrooms.js"></script>
     <title>Classroom App</title>
 </head>
 <body>
     <header>
         <h1><b>iinchou</b></h1>
-        <img src="img/badtz-maru.jpg" width="80px">
+        <img src="/img/badtz-maru.jpg" width="80px">
         <p> a classroom application</p>
         <span id="time-display"></span>
         <ul class="main-nav">
@@ -37,7 +37,7 @@
     <aside id="student-display">
         <div id="student-information"></div>
         <button id="form-button">Input Form</button>
-        <form id="student-form" class="hide">
+        <form action="/students" method="post" id="student-form" class="hide">
             <fieldset>
                 <legend><span class="number">1</span>Basic Information:</legend>
                 <label for="firstName">First Name:</label>

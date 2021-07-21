@@ -1,9 +1,9 @@
 //---Gets student list from students.json
 document.addEventListener('DOMContentLoaded', function() {
-fetch('./data/students.json')
+fetch('/students')
 .then(result => result.json())
 .then(students => buildList(students))
-})
+});
 
 //---builds list of students-------
 const studentList = document.getElementById('class-list')
@@ -29,7 +29,7 @@ const classList = document.getElementById('class-list')
 classList.addEventListener('click', (event)=> { 
     const selectedName = event.target;
     const nameArray = selectedName.textContent.split(" ");
-    fetch('./data/students.json')
+    fetch('/students')
     .then(result => result.json())
     .then(students => getStudentInfo(students, nameArray))
 })
