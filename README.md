@@ -1,6 +1,6 @@
 # iinchou: a classroom organizer
 
-"iinchou" is Japanese for "class representative". That is exactly what this app strives to be! It is intended for an admin and teachers to organize students into classrooms. 
+"iinchou" is Japanese for "class representative". That is exactly what this app strives to be! It is intended for an admin and teachers to organize students into classrooms. I hope to expand it to handle important holidays/ days off. and maybe an attendance and messaging system. 
 
 Features List:
 [] 1. Read and parse an external file (such as JSON or CSV) into your application and display some data from that in your app
