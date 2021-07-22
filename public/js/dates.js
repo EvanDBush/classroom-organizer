@@ -1,15 +1,20 @@
-// const fs = require('fs');
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/dates')
+    .then(result => result.json())
+    .then(dates => buildDateList(dates))
+    .catch(err => { 
+        console.log(err);
+    })
+    });
 
-// fs.readFile('./data/calender.json', (err, data) => {
-//     if (err) throw err;
-//     let dateData = JSON.parse(data);
-//     dateData.forEach(date => {
-//         const p = document.createElement("p");
-//         p.textContent = `${date.name}: ${date.date[0]} `
-//         document.getElementById("test").appendChild(p);
-        
-//     })
-// });
+function buildDateList(dates) {
+    dates.forEach(date => {
+        console.log(date);
+        let item = document.createElement('li')
+        item.textContent = `${date.name} ${date.date[0]}`
+        document.getElementById('date-list').appendChild(item)        
+    });
+}
 
 
 // Displays current date
