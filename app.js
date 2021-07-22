@@ -18,7 +18,7 @@ mongoose.connection.on('error', err => {
 });
 
 //  middleware
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false})); //simple bodies
 app.use(express.json());
