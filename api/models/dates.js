@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const dateSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    date: Date,
+    date: Array,
     description: String,
     noWork: Boolean,
 })
