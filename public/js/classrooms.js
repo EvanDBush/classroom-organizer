@@ -1,11 +1,8 @@
 class Classroom {
-    constructor( roomName, ageRange, students) {
+    constructor( roomName, ageDates, students) {
     this.roomName = roomName;
-    this.ageRange = ageRange;
+    this.ageDates = [new Date(ageDates[0]), new Date(ageDates[1])];
     this.students = students;
-    }
-    addStudent(student) {
-        this.students.push(student);
     }
 }
 
@@ -13,10 +10,10 @@ const schoolYearStartDate = new Date(08/01/2021);
 const todaysDate = new Date();
 
 
-const figs = new Classroom('figs', [6/30/2021, 1/1/2021], []);
-const grapes = new Classroom('grapes', [12/31/2020, 7/1/2020], []);
-const lemons = new Classroom('lemons', [6/30/2020, 1/1/2020], []);
-const apples = new Classroom('apples', [12/31/2019, 7/1/2019], []);
+const figs = new Classroom('figs', [06/30/2021, 01/01/2021], []);
+const grapes = new Classroom('grapes', [12/31/2020, 07/01/2020], []);
+const lemons = new Classroom('lemons', [06/30/2020, 01/01/2020], []);
+const apples = new Classroom('apples', [12/31/2019, 07/01/2019], []);
 
 let classroomsArray = [figs, grapes, lemons, apples]
 const classroomList = document.getElementById('classroom-ulist')
@@ -27,11 +24,31 @@ classroomsArray.forEach(classroom => {
     classroomList.appendChild(listItem)
 })
 
-
-
-
 classroomList.addEventListener('click', (event) => {
-    const selectedClassroom = event.target;
-})
+    const roomClicked = event.target.textContent;
+    fetch('/students')
+    .then(result => result.json())
+    .then(students => organizeByAge(students, roomClicked))
+    .catch(err => { 
+        console.log(err);
+    })
+    });
+
+function organizeByAge(students, roomClicked) {
+    students.forEach((student) => {
+        const bDay = new Date(student.birthDate);
+        
+        if (figs.ageDates[1] <= bDay <= figs.ageDates[0]) {
+            figs.students.push(student);
+        } else if (grapes.ageDates[1] <=  bDay <=  grapes.ageDates[0]) {
+            grapes.students.push(student);
+        } else if (lemons.ageDates[1] <=  bDay <=  lemons.ageDates[0]) {
+            lemons.students.push(student);
+        } else if (apples.ageDates[1] <=  bDay <=  apples.ageDates[0]) {
+            apples.students.push(student);
+        };
+        
+    })
+};
 
 
