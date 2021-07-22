@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 fetch('/students')
 .then(result => result.json())
 .then(students => buildList(students))
+.catch(err => { 
+    console.log(err);
+})
 });
 
 //---builds list of students-------
@@ -32,6 +35,9 @@ classList.addEventListener('click', (event)=> {
     fetch('/students')
     .then(result => result.json())
     .then(students => getStudentInfo(students, nameArray))
+    .catch(err => { 
+        console.log(err);
+    })
 })
 
 // displays student information. Separate from above function

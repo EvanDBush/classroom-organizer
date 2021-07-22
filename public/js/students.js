@@ -27,3 +27,5 @@ class Student {
         return ageInDays;
     }
 }
+// const age = Math.floor((todaysDate.getTime() - bDay.getTime()) / (1000 * 60 * 60 * 24));
+        // console.log(`${student.firstName} ${student.lastName} is ${age} days old.`);
