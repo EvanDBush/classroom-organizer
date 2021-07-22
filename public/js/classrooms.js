@@ -20,7 +20,7 @@ const classroomList = document.getElementById('classroom-ulist')
 
 classroomsArray.forEach(classroom => {
     let listItem = document.createElement('li')
-    listItem.textContent = `${classroom.roomName} ${classroom.students.length}`
+    listItem.textContent = `${classroom.roomName}`
     classroomList.appendChild(listItem)
 })
 
@@ -32,23 +32,18 @@ classroomList.addEventListener('click', (event) => {
     .catch(err => { 
         console.log(err);
     })
-    });
+});
 
 function organizeByAge(students, roomClicked) {
-    students.forEach((student) => {
-        const bDay = new Date(student.birthDate);
-        
-        if (figs.ageDates[1] <= bDay <= figs.ageDates[0]) {
-            figs.students.push(student);
-        } else if (grapes.ageDates[1] <=  bDay <=  grapes.ageDates[0]) {
-            grapes.students.push(student);
-        } else if (lemons.ageDates[1] <=  bDay <=  lemons.ageDates[0]) {
-            lemons.students.push(student);
-        } else if (apples.ageDates[1] <=  bDay <=  apples.ageDates[0]) {
-            apples.students.push(student);
-        };
-        
+    classroomsArray.forEach(classroom => {
+        if (classroom.roomName === roomClicked) {
+            students.forEach((student) => {
+                const bDay = new Date(student.birthDate);
+                if (classroom.ageDates[1] <= bDay <= classroom.ageDates[0]) {
+                    classroom.students.push(student);
+                }        
+            })
+        }
     })
-};
-
+}
 
