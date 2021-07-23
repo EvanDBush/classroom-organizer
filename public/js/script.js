@@ -23,8 +23,8 @@ async function buildList(studentData) {
 async function clickDisplayStudent(studentData, event) { 
     const selectedName = event.target;
     const nameArray = selectedName.textContent.split(" ");
-    await studentData;
-    getStudentInfo(studentData, nameArray)
+    await studentData
+    .then(studentData => getStudentInfo(studentData, nameArray))
 }
 
 studentList.addEventListener('click', (event) => {

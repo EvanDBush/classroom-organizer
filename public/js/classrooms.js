@@ -9,7 +9,6 @@ class Classroom {
 const schoolYearStartDate = new Date(08/01/2021);
 const todaysDate = new Date();
 
-
 const figs = new Classroom('figs', ["06/30/2021", "01/01/2021"], []);
 const grapes = new Classroom('grapes', ["12/31/2020", "07/01/2020"], []);
 const lemons = new Classroom('lemons', ["06/30/2020", "01/01/2020"], []);
@@ -24,17 +23,10 @@ classroomsArray.forEach(classroom => {
     classroomList.appendChild(listItem)
 })
 
-
 classroomList.addEventListener('click', (event) => {
     const roomClicked = event.target.textContent;
-    fetch('/students')
-    .then(result => result.json())
-    .then(students => organizeByAge(students, roomClicked))
-    .catch(err => { 
-        console.log(err);
-    })
+    organizeByAge(studentData, roomClicked);
 });
-
 
 function organizeByAge(students, roomClicked) {
     const classroom = classroomsArray.find((room) => room.roomName === roomClicked);
