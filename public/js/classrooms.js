@@ -10,10 +10,10 @@ const schoolYearStartDate = new Date(08/01/2021);
 const todaysDate = new Date();
 
 
-const figs = new Classroom('figs', [06/30/2021, 01/01/2021], []);
-const grapes = new Classroom('grapes', [12/31/2020, 07/01/2020], []);
-const lemons = new Classroom('lemons', [06/30/2020, 01/01/2020], []);
-const apples = new Classroom('apples', [12/31/2019, 07/01/2019], []);
+const figs = new Classroom('figs', ["06/30/2021", "01/01/2021"], []);
+const grapes = new Classroom('grapes', ["12/31/2020", "07/01/2020"], []);
+const lemons = new Classroom('lemons', ["06/30/2020", "01/01/2020"], []);
+const apples = new Classroom('apples', ["12/31/2019", "07/01/2019"], []);
 
 let classroomsArray = [figs, grapes, lemons, apples]
 const classroomList = document.getElementById('classroom-ulist')
@@ -23,6 +23,7 @@ classroomsArray.forEach(classroom => {
     listItem.textContent = `${classroom.roomName}`
     classroomList.appendChild(listItem)
 })
+
 
 classroomList.addEventListener('click', (event) => {
     const roomClicked = event.target.textContent;
@@ -39,7 +40,7 @@ function organizeByAge(students, roomClicked) {
         if (classroom.roomName === roomClicked) {
             students.forEach((student) => {
                 const bDay = new Date(student.birthDate);
-                if (classroom.ageDates[1] <= bDay <= classroom.ageDates[0]) {
+                if ((classroom.ageDates[1] >= bDay) && (bDay >= classroom.ageDates[0])) {
                     classroom.students.push(student);
                 }        
             })
