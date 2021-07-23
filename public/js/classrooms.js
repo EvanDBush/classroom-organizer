@@ -35,16 +35,14 @@ classroomList.addEventListener('click', (event) => {
     })
 });
 
+
 function organizeByAge(students, roomClicked) {
-    classroomsArray.forEach(classroom => {
-        if (classroom.roomName === roomClicked) {
-            students.forEach((student) => {
-                const bDay = new Date(student.birthDate);
-                if ((classroom.ageDates[1] >= bDay) && (bDay >= classroom.ageDates[0])) {
-                    classroom.students.push(student);
-                }        
-            })
-        }
-    })
+    const classroom = classroomsArray.find((room) => room.roomName === roomClicked);
+    students.forEach((student) => {
+        const bDay = new Date(student.birthDate);
+        if ((classroom.ageDates[1] >= bDay) && (bDay >= classroom.ageDates[0])) {
+            classroom.students.push(student);
+        }        
+    });
 }
 
