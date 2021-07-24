@@ -1,5 +1,5 @@
 html {
-    background-color: gray;
+    background-color: lightskyblue;
 }
 
 body {
@@ -18,7 +18,7 @@ h1 {
 }
 
 img {
-    border-radius: 15px;;
+    border-radius: 15px;
 }
 
 header li {
@@ -29,6 +29,34 @@ header li {
 header {
     margin: 0px;
 }
+
+form {
+    border-radius: 15px;
+}
+
+label {
+    float: left;
+    text-align: right;
+    margin-right: 15px;
+    width: 100px;
+}
+
+input {
+    float: left;
+    text-align: left;
+    margin-right: 15px;
+    width: 200px;
+}
+
+button {
+    width: 200px;
+    font-family: 'Baloo Tammudu 2';
+    background: lightseagreen;
+    color: white;
+    border-radius: 15px;
+}
+
+
 
 a:link {
     color: lightsalmon;
@@ -59,10 +87,10 @@ aside {
     border-radius: 15px; 
 }
 
-main ul {
+ul {
     max-height: 200px;
     overflow-y: scroll;
-    border: medium solid white;
+    border: medium solid lightsalmon;
     border-radius: 15px; 
     list-style-position: inside;
 }
@@ -92,11 +120,46 @@ li:hover {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background: #c2c9d2;
+    /* background: #c2c9d2; */
+    background: lightskyblue
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 70%;
+        justify-content: center;
+    }
+
+    ul {
+        width: 75%;
+        
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 @media (min-width: 900px) {
     body {
-        width: 50%;
-    };
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        columns: 3;
+        
+    }
+    
+    div {
+        width: 40%;
+        height: 40%;
+        margin: 5%;
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
