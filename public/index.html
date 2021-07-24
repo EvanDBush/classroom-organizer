@@ -21,55 +21,52 @@
         <ul class="main-nav">
             <li><a href="#">Classrooms</a></li>
 			<li><a href="#">Students</a></li>
-			<li><a href="#">Teachers</a></li>
 			<li><a href="#">Important Dates</a></li>
         </ul>
     </header>
+    <main id="classroom-display"></main>
     <div>
         <h3>Classroom-List</h3>
         <ul id="classroom-ulist"></ul>   
     </div>
-    <main id="classroom-display">
+    <div id="student-information"></div>
+    <div>
         <h4>Class Roster</h4>
         <ul id="class-list">
         </ul>
-    </main>
-    <aside id="student-display">
-        <div id="student-information"></div>
         <button id="form-button">Input Form</button>
+    </div>
+    <div>        
         <form action="/students" method="post" id="student-form" class="hide">
             <fieldset>
-                <legend><span class="number">1</span>Basic Information:</legend>
+                <legend>Student Information:</legend>
                 <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
                 <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
                 <label for="middleInitial">Middle Name:</label>
-                <input type="text" id="middleInitial" name="middleInitial" placeholder="Middle Initial">
+                <input type="text" id="middleInitial" name="middleInitial" placeholder="Middle Initial"><br>
                 <label for="birthdate">Birth Date:</label>
-                <input type="date" id="birthDate" name="birthDate">
+                <input type="date" id="birthDate" name="birthDate"><br>
                 <label for="parentName">Parent Name:</label>
-                <input type="text" id="parentName" name="parentName" placeholder="First, Last Name">
-                <label for="phoneContact"> Emergency Contact:</label>
-                <input type="tel" id="phoneContact" name="phoneContact">
-                <label for="email"> E-mail Contact:</label>
-                <input type="email" id="emailContact" name="emailContact">
-                <legend><span class="number">3</span>Additional Info:</legend>
+                <input type="text" id="parentName" name="parentName" placeholder="First, Last Name"><br>
+                <label for="phoneContact">Phone:</label>
+                <input type="tel" id="phoneContact" name="phoneContact"><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="emailContact" name="emailContact"><br>
                 <label for="inSchool">In School?</label>
-                <input type="radio" id="inSchool" name="inSchool">
+                <input type="radio" id="inSchool" name="inSchool"><br>
                 <label for="allergies">Allergies:</label>
                 <input type="text" id="allergies" name="allergies"></input>
             </fieldset>
-            <button type="submit"> Submit </button
-            </form>
-            <p id="log"></p>
-    </aside>
-    <footer>
+        <button type="submit"> Submit </button
+        </form>
+        <p id="log"></p>
+    </div>
+    <div>
         <h3>Important Dates Bulletin.</h3>
-        <ul id="date-list">
-            
-        </ul>
+        <ul id="date-list"></ul>
         <span id="test"></span>
-    </footer>
+    </div>
 </body>
 </html>
