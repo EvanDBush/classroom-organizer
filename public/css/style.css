@@ -30,6 +30,11 @@ header {
     margin: 0px;
 }
 
+div {
+    border: medium solid lightsalmon;
+    border-radius: 15px; 
+}
+
 form {
     border-radius: 15px;
 }
@@ -90,9 +95,9 @@ aside {
 ul {
     max-height: 200px;
     overflow-y: scroll;
-    border: medium solid lightsalmon;
-    border-radius: 15px; 
     list-style-position: inside;
+    border: medium solid lightskyblue;
+    border-radius: 15px; 
 }
 
 li {
@@ -132,7 +137,6 @@ li:hover {
 
     ul {
         width: 75%;
-        
     }
     
     header ul {
@@ -148,6 +152,7 @@ li:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         columns: 3;
         
     }
@@ -155,11 +160,11 @@ li:hover {
     div {
         width: 40%;
         height: 40%;
-        margin: 5%;
+        
     }
     
     header ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
