@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 fetch('/students')
 .then(result => result.json())
 .then(students => studentData = students)
+.then(students => buildList(students))
 .catch(err => { 
     console.log(err);
 })
@@ -12,25 +13,19 @@ fetch('/students')
 //---builds list of students-------
 const studentList = document.getElementById('class-list')
 
-async function buildList(studentData) {
-    await studentData.forEach(student => {
-        let item = document.createElement('li')
-        item.textContent = `${student.firstName} ${student.lastName}`
-        studentList.appendChild(item)        
+function buildList(studentData) {
+    studentData.forEach(student => {
+    let item = document.createElement('li')
+    item.textContent = `${student.firstName} ${student.lastName}`
+    studentList.appendChild(item)        
     });
 }
 
-async function clickDisplayStudent(studentData, event) { 
+studentList.addEventListener('click', (event) => {
     const selectedName = event.target;
     const nameArray = selectedName.textContent.split(" ");
-    await studentData
-    .then(studentData => getStudentInfo(studentData, nameArray))
-}
-
-studentList.addEventListener('click', (event) => {
-    buildList(studentData);
-    clickDisplayStudent(studentData, event);
-})
+    getStudentInfo(studentData, nameArray);
+});
 
 // displays student information. Separate from above function
 function getStudentInfo(studentData, nameArray) {
