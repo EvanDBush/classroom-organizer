@@ -1,6 +1,9 @@
+let dateData = null;
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('/dates')
     .then(result => result.json())
+    .then(dates => dateData = dates)
     .then(dates => buildDateList(dates))
     .catch(err => { 
         console.log(err);
@@ -9,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function buildDateList(dates) {
     dates.forEach(date => {
-        console.log(date);
         let item = document.createElement('li')
         item.textContent = `${date.name} ${date.date[0]}`
         document.getElementById('date-list').appendChild(item)        
@@ -23,4 +25,4 @@ const today = new Date();
 const [month, day, year] = 
     [today.getMonth(), today.getDate(), today.getFullYear()];
 
-timeDisplay.textContent = `Todays Date: ${[month, day, year]}`;
+timeDisplay.textContent = `Today's Date: ${[month, day, year]}`;
