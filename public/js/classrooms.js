@@ -29,17 +29,17 @@ classroomsArray.forEach(classroom => {
 classroomList.addEventListener('click', (event) => {
     const roomClicked = event.target.textContent;
     organizeByAge(studentData, roomClicked);
-    buildList(studentData)
+    console.log(roomClicked)
 });
 
 function organizeByAge(studentData, roomClicked) {
     const classroom = classroomsArray.find((room) => room.roomName === roomClicked);
     studentData.forEach((student) => {
         const bDay = new Date(student.birthDate);
-        if ((bDay <= new Date(classroom.ageDates[1])) && (bDay >= new Date(classroom.ageDates[0]))) {
+        if ((bDay <= new Date(classroom.ageDates[0])) && (bDay >= new Date(classroom.ageDates[1]))) {
             classroom.students.push(student);   
         }        
     });
-    console.log(classroom.students);
+    buildList(classroom.students);
 }
 
