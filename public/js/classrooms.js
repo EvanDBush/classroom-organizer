@@ -29,6 +29,7 @@ classroomsArray.forEach(classroom => {
 classroomList.addEventListener('click', (event) => {
     const roomClicked = event.target.textContent;
     organizeByAge(studentData, roomClicked);
+    buildList(studentData)
 });
 
 function organizeByAge(studentData, roomClicked) {
