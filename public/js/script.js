@@ -1,5 +1,6 @@
 let studentData = null;
 let daysUntilNextBirthDay = null;
+
 // Gets student data from API. Stores as studentData.
 document.addEventListener('DOMContentLoaded', function() {
 fetch('/students')
