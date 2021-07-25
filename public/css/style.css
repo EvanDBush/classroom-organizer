@@ -31,6 +31,9 @@ header {
 }
 
 div {
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
     border: medium solid lightsalmon;
     border-radius: 15px; 
 }
@@ -60,8 +63,6 @@ button {
     color: white;
     border-radius: 15px;
 }
-
-
 
 a:link {
     color: lightsalmon;
@@ -105,7 +106,7 @@ li {
     size: 20px;
     border: medium solid black;
     border-radius: 15px;
-    text-align:left; 
+    text-align: center; 
 }
 
 li:hover {
