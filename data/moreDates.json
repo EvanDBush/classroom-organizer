@@ -1,0 +1,95 @@
+[{
+"name": "First Day of School",
+"date": ["08/11/2021"],
+"description": "Welcome back Students!",
+"noWork": "false" 
+},
+{
+"name": "Teacher Professional Development",
+"date": ["08/09/2021", "08/10/2021"],
+"description": "Seminars for teachers. No students",
+"noWork": "false"
+},
+{
+"name": "Labor Day",
+"date": ["09/06/2021"],
+"description": "federal holiday in the United States celebrated on the first Monday in September to honor and recognize the American labor movement and the works and contributions of laborers to the development and achievements of the United States. No School. No Teachers",
+"noWork": "True"
+},
+{
+"name": "Election Day",
+"date": ["11/02/2021"],
+"description": "No School. Parent Teacher Conferences",
+"noWork": "True"
+},
+{
+"name": "Thanksgiving Day",
+"date": ["11/25/2021", "11/26/2021"],
+"description": " It originated as a harvest festival, and the centerpiece of Thanksgiving celebrations remains Thanksgiving dinner.",
+"noWork": "True"
+},
+{
+"name": "Christmas Eve",
+"date": ["12/24/2021"],
+"description": "The evening or entire day before Christmas Day, the festival commemorating the birth of Jesus.",
+"noWork": "True"
+},
+{
+"name": "New Years Eve",
+"date": ["12/31/2021"],
+"description": "No School. Happy New Year! In many countries, New Year's Eve is celebrated at evening parties, where many people dance, eat, drink, and watch or light fireworks.",
+"nowork": "True"
+},
+{
+"name": "Martin Luther King Jr Day",
+"date": ["01/17/2022"],
+"description": "King was the chief spokesperson for nonviolent activism in the Civil Rights Movement, which protested racial discrimination in federal and state law.",
+"noWork": "True"
+},
+{
+"name": "President's Day",
+"date": ["02/21/2022"],
+"description": "Teacher Professional Development",
+"noWork": "false"
+},
+{
+"name": "Parents Teacher Conferences",
+"date": ["03/25/2022"],
+"description": "Teacher Professional Development",
+"noWork": "false"
+},
+{
+"name": "Last Day of School",
+"date": ["04/25/2022"],
+"description": "Last Day of School!",
+"noWork": "false"
+},
+{
+"name": "Teacher Professional Development",
+"date": ["04/26/2022", "04/27/2022"],
+"description": "Teacher Professional Development",
+"noWork": "false"
+},
+{
+"name": "Memorial Day",
+"date": ["04/30/2022"],
+"description": "A federal holiday in the United States to honor and mourn the U.S. military personnel who have died in the course of carrying out their duties",
+"noWork": "true"
+},
+{
+"name": "Teacher Professional Development",
+"date": ["04/31/2022"],
+"description": "Teacher Professional Development",
+"noWork": "false"
+},
+{
+"name": "First Day of Summer Camp",
+"date": ["06/01/2022"],
+"description": "Welcome Back Students!",
+"noWork": "false"
+}]
+
+
+
+
+June 1st		First Day of Summer Camp 2022
