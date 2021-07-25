@@ -1,10 +1,11 @@
 let studentData = null;
+let daysUntilNextBirthDay = null;
 // Gets student data from API. Stores as studentData.
 document.addEventListener('DOMContentLoaded', function() {
 fetch('/students')
 .then(result => result.json())
 .then(students => studentData = students)
-.then(students => buildList(students))
+// .then(students => buildList(students))
 .catch(err => { 
     console.log(err);
 })
@@ -27,17 +28,18 @@ studentList.addEventListener('click', (event) => {
     getStudentInfo(studentData, nameArray);
 });
 
-// displays student information. Separate from above function
+
 function getStudentInfo(studentData, nameArray) {
     studentData.forEach(student => {
         if (student.firstName === nameArray[0] && student.lastName === nameArray[1]) {
-        document.getElementById('student-information').innerHTML = 
-            `${student.firstName} ${student.lastName} <br> 
-            Parent Name: ${student.parentName} <br>
-            Emergency Contact: ${student.phoneContact} <br>
-            Email Contact: ${student.emailContact} <br>
-            Date of Birth: ${student.birthDate} <br>
-            Allergies: ${student.allergies}` 
+            
+            document.getElementById('student-information').innerHTML = 
+                `${student.firstName} ${student.lastName} <br> 
+                Parent Name: ${student.parentName} <br>
+                Emergency Contact: ${student.phoneContact} <br>
+                Email Contact: ${student.emailContact} <br>
+                Date of Birth: ${student.birthDate} <br>
+                Allergies: ${student.allergies} <br>` 
         }
     })
 }
@@ -60,7 +62,21 @@ function logSubmit(event) {
     event.preventDefault();
 };
 
-form.addEventListener('submit', logSubmit)
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let data = new FormData(form);
+    fetch('/students', {
+        method: 'POST',
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+})
 
 //---Gets student list from students.json
 // document.addEventListener('DOMContentLoaded', function() {
@@ -71,3 +87,13 @@ form.addEventListener('submit', logSubmit)
 //     console.log(err);
 // })
 // });
+
+// function daysUntilBirthday(student) {
+//     const bDayArray = student.birthDate.split('/');
+//     const nextBirthday = new Date(today.getFullYear, bDayArray[0], bDayArray[1])
+//         if (today.getTime() > nextBirthday.getTime()) {
+//             nextBirthday.setFullYear(nextBirthday.getFullYear() + 1)
+//         }
+//     let daysUntilNextBirthDay = Math.floor((nextBirthday.getTime() - today.getTime())/(1000 * 60 * 60 * 24))
+//     return daysUntilNextBirthDay;
+//     }
