@@ -23,7 +23,7 @@ class Student {
         }
     get ageInDays() {
         const today = new Date();
-        let ageInDays = (today.getTime() - student.birthDate.getTime())/(60 * 60 * 24);
+        let ageInDays = (today.getTime() - student.birthDate.getTime())/(1000* 60 * 60 * 24);
         return ageInDays;
     }
 }
