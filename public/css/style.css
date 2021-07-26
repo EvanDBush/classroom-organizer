@@ -1,59 +1,69 @@
 html {
-    background-color: lightskyblue;
+    background-color: skyblue;
 }
 
 body {
+    
     font-family: 'Baloo Tammudu 2', cursive;
     color: white;
     width: 90%;
     margin: 10px auto;
     text-align: center;
     border-radius: 15px;
-    background-color: black;   
+    background-color: darkslategray;   
 }
 
-h1 {
-    padding: 0px;
-    margin: 0px
+header {
+    width: 90%;
+    margin: 5% auto;
 }
 
 img {
     border-radius: 15px;
+    position: relative;
+    top: 30px;
 }
 
-header li {
-    text-align:left;
-    display: flex;
+h1 {
+    margin-bottom: 0;
 }
 
-header {
-    margin: 0px;
+h3 {
+    
+    margin: 0;
+}
+
+h4 {
+    display: inline;
+    position: relative;
+    bottom: 15px;
+    padding:  0px 10px 0px 10px;
+    border: medium solid lightsalmon;
+    border-radius: 15px;
+    background: darkslategray;
 }
 
 div {
-    margin: 1%;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    min-height: 20px;
+    margin: 5% auto;
+    margin-top: -.8em;
+    align-self: center;
     border: medium solid lightsalmon;
     border-radius: 15px; 
 }
 
-form {
-    border-radius: 15px;
-}
-
-label {
-    float: left;
-    text-align: right;
-    margin-right: 15px;
-    width: 100px;
-}
-
-input {
-    float: left;
-    text-align: left;
-    margin-right: 15px;
-    width: 200px;
+ul {
+    width: 75%;
+    padding: 5px;
+    margin: 5% auto;
+    margin-top: 0%;
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: scroll;
+    list-style-position: inside;
+    border: medium solid lightskyblue;
+    border-radius: 15px; 
 }
 
 button {
@@ -88,23 +98,10 @@ a:active {
     text-decoration: underline;
 }
 
-aside {
-    border: medium solid lightsalmon;
-    border-radius: 15px; 
-}
-
-ul {
-    max-height: 200px;
-    overflow-y: scroll;
-    list-style-position: inside;
-    border: medium solid lightskyblue;
-    border-radius: 15px; 
-}
-
 li {
     margin: 5px;
     size: 20px;
-    border: medium solid black;
+    border: medium solid slategray;
     border-radius: 15px;
     text-align: center; 
 }
