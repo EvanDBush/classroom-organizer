@@ -11,11 +11,13 @@
 
 4. Inside the file. Create an object to store the password for the database.
 
-    ```{
-        "env": {
-            "MONGO_ATLAS_PW": "password"
-        }
-    }```
+```
+{
+    "env": {
+        "MONGO_ATLAS_PW": "password"
+    }
+}
+```
 
 5. replace "password" with string given in project submission form. (remember to use double quotes for valid JSON).
 
