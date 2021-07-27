@@ -27,18 +27,13 @@
         </ul>
     </header>
     <div>
-        <h4>Classroom-List</h4>
-        <ul id="classroom-ulist"></ul>   
-    </div>
-    <div id="student-information"></div>
-    <div>
         <h4>Class Roster</h4>
         <ul id="class-list">
         </ul>
         <button id="form-button">Input Form</button>
     </div>
     <div>        
-        <form action="/students" method="post" id="student-form" class="hide">
+        <form action="/students" method="post" id="student-form" class="hide" style="display: none;">
             <fieldset>
                 <legend>Student Information:</legend>
                 <label for="firstName">First Name:</label>
@@ -64,6 +59,11 @@
         </form>
         <p id="log"></p>
     </div>
+    <div>
+        <h4>Classroom-List</h4>
+        <ul id="classroom-ulist"></ul>   
+    </div>
+    <div id="student-information"></div>
     <div>
         <h4>Important Dates Bulletin.</h4>
         <ul id="date-list"></ul>

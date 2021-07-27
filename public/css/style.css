@@ -50,7 +50,7 @@ div {
     margin-top: -.8em;
     align-self: center;
     border: medium solid lightsalmon;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 ul {
@@ -64,6 +64,12 @@ ul {
     list-style-position: inside;
     border: medium solid lightskyblue;
     border-radius: 15px; 
+}
+
+fieldset {
+    border: medium solid lightsalmon;
+    border-radius: 15px;
+    background: lightseagreen;
 }
 
 button {
@@ -129,8 +135,18 @@ li:hover {
 
 @media (min-width: 500px) {
     body {
-        width: 70%;
+        width: 90%;
         justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        width: 300px;
+    }
+
+    div{
+        width:fit-content;
     }
 
     ul {
@@ -138,31 +154,20 @@ li:hover {
     }
     
     header ul {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: block;
     }
 }
 
 @media (min-width: 900px) {
     body {
         width: 90%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 300px 1fr 1fr;
         justify-content: center;
-        columns: 3;
-        
     }
+
     
     div {
-        width: 40%;
-        height: 40%;
-        
-    }
-    
-    header ul {
-        display: flex;
-        justify-content: space-around;
+        width: 90%;
     }
 }
