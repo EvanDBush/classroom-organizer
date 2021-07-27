@@ -36,11 +36,11 @@ dateList.addEventListener('click', (event) => {
 const dateNameClicked = event.target.textContent.split(" ");
 dateData.forEach(date => {
     if (date.name.split(" ")[0] === dateNameClicked[0]) {
-        let descriptionP = document.createElement('p');
+        let descriptionP = document.getElementById('descriptionP');
         descriptionP.textContent = `${date.name}: ${date.description}`;
         
         const daysTill = Math.floor(((new Date(date.date[0]).getTime()) - today.getTime())/(1000 * 60 * 60 * 24))
-        let counterP = document.createElement('p');
+        let counterP = document.getElementById('counterP');
         counterP.textContent = `${daysTill} days until ${date.name} !!!`
 
         document.getElementById('test').appendChild(descriptionP);

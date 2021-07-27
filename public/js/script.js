@@ -16,6 +16,8 @@ fetch('/students')
 const studentList = document.getElementById('class-list')
 
 function buildList(studentData) {
+    studentList.textContent= null;
+    
     studentData.forEach(student => {
     let item = document.createElement('li')
     item.textContent = `${student.firstName} ${student.lastName}`
