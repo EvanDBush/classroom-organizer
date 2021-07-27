@@ -3,7 +3,6 @@ const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
-// routes
 const studentRoutes = require('./api/routes/students');
 const classroomRoutes = require('./api/routes/classrooms');
 const dateRoutes = require('./api/routes/dates');
@@ -39,7 +38,6 @@ app.use('/classrooms', classroomRoutes);
 app.use('/dates', dateRoutes);
 app.use('/messages', messageRoutes);
 
-//handle errors that pass middleware
 app.use((request, response, nextFunction) => {
     const error = new Error('Not Found');
     error.status = 404;

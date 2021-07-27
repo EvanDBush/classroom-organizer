@@ -14,9 +14,6 @@ const grapes = new Classroom('grapes', ["12/31/2020", "07/01/2020"], []);
 const lemons = new Classroom('lemons', ["06/30/2020", "01/01/2020"], []);
 const apples = new Classroom('apples', ["12/31/2019", "07/01/2019"], []);
 
-console.log(new Date(figs.ageDates[0]))
-
-
 let classroomsArray = [figs, grapes, lemons, apples]
 const classroomList = document.getElementById('classroom-ulist')
 
@@ -42,4 +39,3 @@ function organizeByAge(studentData, roomClicked) {
     });
     buildList(classroom.students);
 }
-

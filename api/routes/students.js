@@ -48,7 +48,6 @@ router.post('/',(req, res, nextFunction) => {
     })
 });
 
-
 router.get('/:id',(req, res, nextFunction) => {
     const id = req.params.id;
     Student.findById(id)
@@ -61,8 +60,7 @@ router.get('/:id',(req, res, nextFunction) => {
             res.status(404).json({
                 message: "No entry found for ID provided"
             })
-        }
-        
+        }    
     })
     .catch(error => {
         console.log(error);

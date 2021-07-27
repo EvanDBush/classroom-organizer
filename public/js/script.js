@@ -1,18 +1,15 @@
 let studentData = null;
 let daysUntilNextBirthDay = null;
 
-// Gets student data from API. Stores as studentData.
 document.addEventListener('DOMContentLoaded', function() {
 fetch('/students')
 .then(result => result.json())
 .then(students => studentData = students)
-// .then(students => buildList(students))
 .catch(err => { 
     console.log(err);
 })
 });
 
-//---builds list of students-------
 const studentList = document.getElementById('class-list')
 
 function buildList(studentData) {
@@ -47,7 +44,6 @@ function getStudentInfo(studentData, nameArray) {
     })
 };
 
-//--- Hides Student Form------
 const formButton = document.getElementById('form-button')
 const studentForm = document.getElementById('student-form')
 formButton.addEventListener('click', ()=>{
