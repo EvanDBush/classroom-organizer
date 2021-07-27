@@ -42,9 +42,6 @@ dateData.forEach(date => {
         const daysTill = Math.floor(((new Date(date.date[0]).getTime()) - today.getTime())/(1000 * 60 * 60 * 24))
         let counterP = document.getElementById('counterP');
         counterP.textContent = `${daysTill} days until ${date.name} !!!`
-
-        document.getElementById('test').appendChild(descriptionP);
-        document.getElementById('test').appendChild(counterP);
     }
 })
 })

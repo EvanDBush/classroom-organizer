@@ -59,7 +59,7 @@ ul {
     margin: 5% auto;
     margin-top: 0%;
     min-height: 100px;
-    max-height: 400px;
+    max-height: 340px;
     overflow-y: scroll;
     list-style-position: inside;
     border: medium solid lightskyblue;
@@ -67,7 +67,7 @@ ul {
 }
 
 fieldset {
-    border: medium solid lightsalmon;
+    border: medium solid lightskyblue;
     border-radius: 15px;
     background: lightseagreen;
 }
@@ -77,7 +77,19 @@ button {
     font-family: 'Baloo Tammudu 2';
     background: lightseagreen;
     color: white;
+    border: medium solid lightsalmon;
     border-radius: 15px;
+}
+
+#student-information {
+    height: 50%;
+    font-family: 'Roboto';
+    overflow-y: scroll;   
+}
+#date-information {
+    height: 35%;
+    font-family: 'Roboto';
+    overflow-y: scroll;
 }
 
 a:link {
@@ -149,13 +161,24 @@ li:hover {
 
 @media (min-width: 900px) {
     body {
-        width: 70%;
+        width: 90%;
         display: grid;
         grid-template-columns: 200px 1fr 1fr;
         justify-content: center;
     }
 
+    header h3 {
+        display: none;
+    }
+
     div {
         width: 90%;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        width: 70%;
     }
 }
