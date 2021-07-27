@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
     <script defer src="/js/dates.js"></script>
     <script defer src="/js/classrooms.js"></script>
+    <script defer src="/js/students.js"></script>
     <script defer src="/js/script.js"></script>
     <title>Classroom App</title>
 </head>
@@ -33,7 +34,7 @@
         <button id="form-button">Input Form</button>
     </div>
     <div>        
-        <form action="/students" method="post" id="student-form" class="hide" style="display: none;">
+        <form  method="post" action="/students" id="student-form" class="hide" style="display: none;">
             <fieldset>
                 <legend>Student Information:</legend>
                 <label for="firstName">First Name:</label>
@@ -51,9 +52,9 @@
                 <label for="email">E-mail:</label>
                 <input type="email" id="emailContact" name="emailContact">
                 <label for="inSchool">In School?</label>
-                <input type="radio" id="inSchool" name="inSchool">
+                <input type="text" id="inSchool" name="inSchool">
                 <label for="allergies">Allergies:</label>
-                <input type="text" id="allergies" name="allergies"></input>
+                <input type="text" id="allergies" name="allergies">
             </fieldset>
         <button type="submit"> Submit </button
         </form>

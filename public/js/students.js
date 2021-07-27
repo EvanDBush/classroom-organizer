@@ -1,6 +1,5 @@
 class Student {
-    constructor(
-        id, 
+    constructor( 
         firstName, 
         lastName, 
         middleInitial, 
@@ -10,7 +9,6 @@ class Student {
         emailContact, 
         inSchool, 
         allergies ) {
-            this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;
             this.middleInitial = middleInitial;
@@ -28,4 +26,5 @@ class Student {
     }
 }
 // const age = Math.floor((todaysDate.getTime() - bDay.getTime()) / (1000 * 60 * 60 * 24));
-        // console.log(`${student.firstName} ${student.lastName} is ${age} days old.`);
+// console.log(`${student.firstName} ${student.lastName} is ${age} days old.`);
+

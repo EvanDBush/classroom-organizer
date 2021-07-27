@@ -21,7 +21,7 @@ function buildList(studentData) {
     item.textContent = `${student.firstName} ${student.lastName}`
     studentList.appendChild(item)        
     });
-}
+};
 
 studentList.addEventListener('click', (event) => {
     const selectedName = event.target;
@@ -43,7 +43,7 @@ function getStudentInfo(studentData, nameArray) {
                 Allergies: ${student.allergies} <br>` 
         }
     })
-}
+};
 
 //--- Hides Student Form------
 const formButton = document.getElementById('form-button')
@@ -52,32 +52,58 @@ formButton.addEventListener('click', ()=>{
     if (studentForm.style.display == 'none') {
         studentForm.style.display = 'block'
     } else {studentForm.style.display ='none'}
-})
+});
 
 // submits student form to db NOT FINISHED
-const form = document.getElementById('student-form');
-const log = document.getElementById('log')
+// const formElem = document.getElementById('student-form');
+// const log = document.getElementById('log')
 
-function logSubmit(event) {
-    log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
-    event.preventDefault();
-};
+// function logSubmit(event) {
+//     log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+//     event.preventDefault();
+// };
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let data = new FormData(form);
-    fetch('/students', {
-        method: 'POST',
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-})
+// formElem.addEventListener('submit', (event) => {
+//     logSubmit(event);
+//     event.preventDefault();
+// });
+
+// formElem.addEventListener('submit', (event) => {
+    
+//     let firstName = document.getElementById('firstName').value;
+//     let lastName = document.getElementById('lastName').value;
+//     let middleInitial = document.getElementById('middleInitial').value;
+//     let birthDate = document.getElementById('birthDate').value;
+//     let parentName = document.getElementById('parentName').value;
+//     let phoneContact = document.getElementById('phoneContact').value;
+//     let emailContact = document.getElementById('emailContact').value;
+//     let inSchool = document.getElementById('inSchool').value;
+//     let allergies = document.getElementById('allergies').value;
+    
+//     let bodyObject = new Student( 
+//         firstName,
+//         lastName, 
+//         middleInitial, 
+//         birthDate, 
+//         parentName, 
+//         phoneContact, 
+//         emailContact, 
+//         inSchool, 
+//         allergies) 
+    
+//     fetch('/students', {
+//         method: 'POST',
+//         body: JSON.stringify(bodyObject),
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log('Success:', data);
+//     })
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
+//     event.preventDefault();
+// })
 
 //---Gets student list from students.json
 // document.addEventListener('DOMContentLoaded', function() {

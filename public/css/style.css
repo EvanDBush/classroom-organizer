@@ -141,32 +141,20 @@ li:hover {
         grid-template-columns: 1fr 1fr;
     }
 
-    header {
-        width: 300px;
-    }
-
-    div{
-        width:fit-content;
-    }
-
     ul {
-        width: 75%;
+        width: 85%;
     }
-    
-    header ul {
-        display: block;
-    }
+
 }
 
 @media (min-width: 900px) {
     body {
         width: 90%;
         display: grid;
-        grid-template-columns: 300px 1fr 1fr;
+        grid-template-columns: 200px 1fr 1fr;
         justify-content: center;
     }
 
-    
     div {
         width: 90%;
     }
