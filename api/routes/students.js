@@ -21,15 +21,15 @@ router.get('/',(req, res, nextFunction) => {
 router.post('/',(req, res, nextFunction) => {
     const student = new Student({
         _id: new mongoose.Types.ObjectId(),
-        firstName: req.firstName,
-        lastName: req.lastName,
-        middleInitial: req.middleInitial,
-        birthDate: req.birthDate,
-        parentName: req.parentName,
-        phoneContact: req.phoneContact,
-        emailContact: req.emailContact,
-        inSchool: req.inSchool,
-        allergies: req.allergies
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        middleInitial: req.body.middleInitial,
+        birthDate: req.body.birthDate,
+        parentName: req.body.parentName,
+        phoneContact: req.body.phoneContact,
+        emailContact: req.body.emailContact,
+        inSchool: req.body.inSchool,
+        allergies: req.body.allergies
     });
     student
         .save()
