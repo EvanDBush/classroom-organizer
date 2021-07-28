@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 html {
     background-color: skyblue;
 }
@@ -64,6 +68,25 @@ ul {
     list-style-position: inside;
     border: medium solid lightskyblue;
     border-radius: 15px; 
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+label, input {
+    display: inline-block;
+}
+
+label+input {
+    
+    float: right;
+}
+
+input {
+    width: 50%;
+    float: left;
 }
 
 fieldset {
