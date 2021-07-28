@@ -7,7 +7,7 @@
 
 2. Install node dependencies. "npm install" in project directory terminal.
 
-3. Create "nodemon.json" file in root directory.
+3. Create "nodemon.json" file in root level of classroom-organizer directory.
 
 4. Inside the file. Create an object to store the password for the database.
 
