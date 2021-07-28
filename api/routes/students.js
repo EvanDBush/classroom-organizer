@@ -34,18 +34,14 @@ router.post('/',(req, res, nextFunction) => {
     student
         .save()
         .then(result => {
-        console.log(result);
-        res.status(201).json({
-            message: "handling POST reqs to /students",
-            createdStudent: result
-        });
-    })
-    .catch(err => { 
-        console.log(err);
-        res.status(500).json({
-            error: err
+            console.log(`createdStudent: ${result}`)
         })
-    })
+        .catch(err => { 
+            console.log(err);
+            res.status(500).json({
+            error: err
+            })
+        })
 });
 
 router.get('/:id',(req, res, nextFunction) => {
