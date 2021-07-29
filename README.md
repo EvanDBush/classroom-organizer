@@ -3,6 +3,8 @@
 "iinchou" is Japanese for "class representative". That is exactly what this app strives to be! It is intended for an admin and teachers to organize students into classrooms. I hope to expand it to handle important holidays/ days off. and maybe an attendance and messaging system.
 
 ### Installation Instructions:
+Requires Node.js. Please download and install.
+
 1. Clone repository from github. "https://www.github.com/EvanDBush.classroom-organizer"
 
 2. Install node dependencies. "npm install" in project directory terminal.
