@@ -53,60 +53,61 @@ formButton.addEventListener('click', ()=>{
 });
 
 // submits student form to db NOT FINISHED
-const formElem = document.getElementById('student-form');
-const log = document.getElementById('log')
+// const formElem = document.getElementById('student-form');
+// const log = document.getElementById('log')
 
-function logSubmit(event) {
-    alert(
-        `Form Submitted! Time stamp: ${event.timeStamp}. <br>
-        createdStudent: ${result}`
-        );
+// function logSubmit(event) {
+//     alert(
+//         `Form Submitted! Time stamp: ${event.timeStamp}. <br>
+//         createdStudent: ${result}`
+//         );
 
-};
+// };
 
-formElem.addEventListener('submit', (event) => {
-    logSubmit(event);
+// formElem.addEventListener('submit', (event) => {
+//     logSubmit(event);
     
-});
+// });
 
-formElem.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let firstName = document.getElementById('firstName').value;
-    let lastName = document.getElementById('lastName').value;
-    let middleInitial = document.getElementById('middleInitial').value;
-    let birthDate = document.getElementById('birthDate').value;
-    let parentName = document.getElementById('parentName').value;
-    let phoneContact = document.getElementById('phoneContact').value;
-    let emailContact = document.getElementById('emailContact').value;
-    let inSchool = document.getElementById('inSchool').value;
-    let allergies = document.getElementById('allergies').value;
-    
-    let bodyObject = new Student( 
-        firstName,
-        lastName, 
-        middleInitial, 
-        birthDate, 
-        parentName, 
-        phoneContact, 
-        emailContact, 
-        inSchool, 
-        allergies) 
+// formElem.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     let firstName = document.getElementById('firstName').value;
+//     let lastName = document.getElementById('lastName').value;
+//     let middleInitial = document.getElementById('middleInitial').value;
+//     let birthDate = document.getElementById('birthDate').value;
+//     let parentName = document.getElementById('parentName').value;
+//     let phoneContact = document.getElementById('phoneContact').value;
+//     let emailContact = document.getElementById('emailContact').value;
+//     let inSchool = document.getElementById('inSchool').value;
+//     let allergies = document.getElementById('allergies').value;
 
     
-    console.log(JSON.stringify(bodyObject))
-    fetch('/students', {
-        method: 'POST',
-        body: JSON.stringify(bodyObject),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-    logSubmit(event);
-})
+//     let bodyObject = new Student( 
+//         firstName,
+//         lastName, 
+//         middleInitial, 
+//         birthDate, 
+//         parentName, 
+//         phoneContact, 
+//         emailContact, 
+//         inSchool, 
+//         allergies) 
+
+    
+//     console.log(JSON.stringify(bodyObject))
+//     fetch('/students', {
+//         method: 'POST',
+//         body: JSON.stringify(bodyObject),
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log('Success:', data);
+//     })
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
+//     logSubmit(event);
+// })
 
 //---Gets student list from students.json
 // document.addEventListener('DOMContentLoaded', function() {

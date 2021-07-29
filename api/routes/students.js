@@ -34,6 +34,7 @@ router.post('/',(req, res, nextFunction) => {
     student
         .save()
         .then(result => {
+            res.status(200).json(result);
             console.log(`createdStudent: ${result}`)
         })
         .catch(err => { 
