@@ -128,28 +128,71 @@ Student created by form should now be sorted into class lists upon page refresh.
 ### 4. [x] Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application
 
 ***
--classroom array. push students to class based on birthdate.
+After instantiating my classsroom objects, I put the in an array
+```
+let classroomsArray = [figs, grapes, lemons, apples, allStudents, waitList];
+```
+Then, I displayed them in my project as a list.
+```
+classroomsArray.forEach(classroom => {
+    let listItem = document.createElement('li')
+    listItem.textContent = `${classroom.roomName}`
+    classroomList.appendChild(listItem)
+})
+```
 
 ***
 ### 5. [x]  Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value
+***
 
--function getStudentInfo()
+The function getStudentInfo() takes in an array of objects called studentData and a student name that was clicked on called nameArray. The function matches one object in students data to the clicked name and displays information about that student
+
+```
+function getStudentInfo(studentData, nameArray) {
+    studentData.forEach(student => {
+        if (student.firstName === nameArray[0] && student.lastName === nameArray[1]) {
+            
+            document.getElementById('student-information').innerHTML = 
+                `${student.firstName} ${student.lastName} <br> 
+                Parent Name: ${student.parentName} <br>
+                Emergency Contact: ${student.phoneContact} <br>
+                Email Contact: ${student.emailContact} <br>
+                Date of Birth: ${student.birthDate} <br>
+                Allergies: ${student.allergies} <br>` 
+        }
+    })
+};
+```
 
 ***
 ### 6. [x]  Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event)
 
--click on important date. tells how many days until that date.
+If you click on an important date, the app displays how many days until that date in the information box.
 
+```
+const daysTill = Math.floor(((new Date(date.date[0]).getTime()) - today.getTime())/(1000 * 60 * 60 * 24))
+            let counterP = document.getElementById('counterP');
+            counterP.textContent = `${daysTill} days until ${date.name} !!!`
+```
+***
 Additional Features you can include but may not be covered by Treehouse:
 
 ***
 ### 7. [x]  Create a web server with at least one route and connect to it 
 from your application using ExpressJS
 
--set up student routes POST, GET.
+Set up a server with expressJS. Currently, POST and GET routes work for students. GET works for dates as well. I hope to add more routes in the future.
+
+```
+const port = process.env.PORT || 3000;
+const server = http.createServer(app);
+
+server.listen(port, () => {
+    console.log(`the server is running on port: ${port}`)
+});
+```
+middleware for server built in app.js file.
 
 
 ***
-scroll: https://codepen.io/shippin/pen/vLXyWR
-
-spreadsheet link: https://docs.google.com/spreadsheets/d/1UPrq3MV0_NqX6EdSiI7d4MPOP7YxV4YGap2EDXCmcsM/edit?usp=sharing
+Special thanks to Code Louisvile and my wonderful Mentors; Shannon Beach, Justin Prince, Brad Cypert, and Jacob Kastensmidt!
